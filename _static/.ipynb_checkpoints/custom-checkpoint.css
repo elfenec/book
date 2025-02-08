@@ -1,0 +1,11 @@
+/* Logo par défaut (mode clair) */
+.navbar-brand img {
+    content: url("../_static/fenec_light.png") !important;
+}
+
+/* Logo en mode sombre */
+@media (prefers-color-scheme: dark) {
+    .navbar-brand img {
+        content: url("../_static/fenec_light.png") !important;
+    }
+}

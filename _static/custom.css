@@ -1,0 +1,14 @@
+/* Masquer le logo sombre par défaut */
+.navbar-brand .logo-dark {
+    display: none;
+}
+
+/* En mode sombre: masquer le logo clair et afficher le sombre */
+@media (prefers-color-scheme: dark) {
+    .navbar-brand .logo-light {
+        display: none;
+    }
+    .navbar-brand .logo-dark {
+        display: block;
+    }
+}
