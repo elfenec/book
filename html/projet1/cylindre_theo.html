@@ -1,0 +1,1424 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>I. Cylindre sous son poids propre &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=7b2cf05a" />
+    <link rel="stylesheet" type="text/css" href="../_static/.ipynb_checkpoints/custom-checkpoint.css" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../_static/documentation_options.js?v=a8e58a58"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'projet1/cylindre_theo';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="II. Application numérique : le bol" href="cylindre_num.html" />
+    <link rel="prev" title="Bienvenue dans ce Projet Éducatif de Mécanique" href="../intro.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/fenec_light.png" class="logo__image only-light" alt="My sample book - Home"/>
+    <img src="../_static/fenec_dark.png" class="logo__image only-dark pst-js-only" alt="My sample book - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Projet 1</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">I. Cylindre sous son poids propre</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cylindre_num.html">II. Application numérique : le bol</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Projet 2</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../projet2/torsion_theo.html">III. Cylindre soumis à la torsion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../projet2/torsion_num.html">IV. Problème torsion d’arbres</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>I. Cylindre sous son poids propre</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resolution-de-problemes-d-elastostatique-linearises-l-approche-en-contrainte">1. Résolution de problèmes d’élastostatique linéarisés : l’approche en contrainte</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#traduisons-lequilibre">1.1 Traduisons l’équilibre :</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calcul-des-efforts">1.2 Calcul des efforts</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#resultante-des-forces">1.2.1 Résultante des forces</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#moment-au-point-o">1.2.2 Moment au point <span class="math notranslate nohighlight">\(O\)</span></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#force-surfacique-sur-gamma-0">1.2.3 Force surfacique sur <span class="math notranslate nohighlight">\(\Gamma_0\)</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#equations-du-probleme-d-elastostatique-avec-chargement-poids-propre-force-surfacique-sur-gamma-0">2. Équations du problème d’élastostatique avec chargement (poids propre + force surfacique sur <span class="math notranslate nohighlight">\(\Gamma_0\)</span>)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#equilibre-local">2.1 Équilibre local</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#loi-de-comportement">2.2 Loi de comportement</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conditions-aux-limites">2.3 Conditions aux limites</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#etude-de-la-regularite-et-des-espaces-admissibles">2.4 Étude de la régularité et des espaces admissibles</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#regularite-du-probleme">2.4.1 Régularité du problème</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-des-espaces-admissibles">2.4.2 Définition des espaces admissibles**</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recherche-de-la-solution-en-contrainte">3. Recherche de la solution en contrainte</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resolution-du-probleme-d-elastostatique-calcul-de-boldsymbol-sigma-33">3.1. Résolution du problème d’élastostatique : Calcul de <span class="math notranslate nohighlight">\(\boldsymbol{\sigma}_{33}\)</span></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#equation-de-divergence">3.1.1 Équation de divergence</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">3.1.2 Conditions aux limites</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#expression-finale-de-sigma-33">3.1.3 Expression finale de <span class="math notranslate nohighlight">\(\sigma_{33}\)</span>**</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#verifications">3.2 Vérifications</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#condition-sur-gamma-1-pour-x-3-h">3.2.1 Condition sur <span class="math notranslate nohighlight">\(\Gamma_1\)</span> (pour <span class="math notranslate nohighlight">\(x_3 = H\)</span>)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#condition-sur-gamma-0-pour-x-3-0">3.2.2 Condition sur <span class="math notranslate nohighlight">\(\Gamma_0\)</span> (pour <span class="math notranslate nohighlight">\(x_3 = 0\)</span>)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#condition-sur-gamma-l-surface-laterale">3.2.3 Condition sur <span class="math notranslate nohighlight">\(\Gamma_l\)</span> (surface latérale)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">3.3 Conclusion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calcul-de-boldsymbol-varepsilon-et-verification-de-la-compatibilite">4. Calcul de <span class="math notranslate nohighlight">\(\boldsymbol{\varepsilon}\)</span> et vérification de la compatibilité</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#expression-de-boldsymbol-varepsilon">4.1 Expression de <span class="math notranslate nohighlight">\(\boldsymbol{\varepsilon}\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#expression-finale-de-boldsymbol-varepsilon-en-fonction-de-x-3">4.2 Expression finale de <span class="math notranslate nohighlight">\(\boldsymbol{\varepsilon}\)</span> en fonction de <span class="math notranslate nohighlight">\(x_3\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#verification-des-equations-de-compatibilite">4.3 Vérification des équations de compatibilité</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">4.4 Conclusion</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integration-de-boldsymbol-varepsilon-pour-trouver-mathbf-u">5. Intégration de <span class="math notranslate nohighlight">\(\boldsymbol{\varepsilon}\)</span> pour trouver <span class="math notranslate nohighlight">\(\mathbf{u}\)</span></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#relations-entre-les-deformations-et-les-deplacements">5.1 Relations entre les déformations et les déplacements</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#integration-des-equations">5.1.1 Intégration des équations</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#expressions-finales-du-champ-de-deplacement">5.1.2 Expressions finales du champ de déplacement</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#exploitation-de-1-2-3-dans-4-5-6">5.1.3 Exploitation de (1’), (2’), (3’) dans (4), (5), (6)</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calcul-du-champ-de-deplacement">5.2 Calcul du champ de déplacement</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#unicite-de-la-solution-boldsymbol-sigma-mathbf-u">5.3 Unicité de la solution <span class="math notranslate nohighlight">\((\boldsymbol{\sigma}, \mathbf{u})\)</span></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#equations-derivees-de-4-5-6">5.3.1 Équations dérivées de (4’), (5’), (6’)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#exploitation-de-4-5-6">5.3.2 Exploitation de (4’’), (5’’), (6’’)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#injection-dans-4-5-6-de-7-8-et-9">5.3.3 Injection dans (4’), (5’), (6’) de (7), (8) et (9)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#integration-finale-pour-mathbf-u">5.3.4 Intégration finale pour <span class="math notranslate nohighlight">\(\mathbf{u}\)</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deplacement-du-point-m-0-sur-gamma-1">6. Déplacement du point <span class="math notranslate nohighlight">\(M_0\)</span> sur <span class="math notranslate nohighlight">\(\Gamma_1\)</span></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calcul-du-deplacement-mathbf-u-sur-gamma-1">6.1 Calcul du déplacement <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> sur <span class="math notranslate nohighlight">\(\Gamma_1\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#position-apres-deformation">6.2 Position après déformation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deformee-de-la-surface-gamma-1">6.3 Déformée de la surface <span class="math notranslate nohighlight">\(\Gamma_1\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">6.4 Conclusion</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#applications-numeriques">7. Applications numériques</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="i-cylindre-sous-son-poids-propre">
+<h1>I. Cylindre sous son poids propre<a class="headerlink" href="#i-cylindre-sous-son-poids-propre" title="Link to this heading">#</a></h1>
+<section id="resolution-de-problemes-d-elastostatique-linearises-l-approche-en-contrainte">
+<h2>1. Résolution de problèmes d’élastostatique linéarisés : l’approche en contrainte<a class="headerlink" href="#resolution-de-problemes-d-elastostatique-linearises-l-approche-en-contrainte" title="Link to this heading">#</a></h2>
+<blockquote>
+<div><p>Dans cet exercice, nous étudions le comportement mécanique d’un cylindre soumis à son propre poids.</p>
+<ul class="simple">
+<li><p><strong>Dimensions et orientations</strong> : Le cylindre a une hauteur <span class="math notranslate nohighlight">\(H\)</span> selon la direction <span class="math notranslate nohighlight">\(\boldsymbol{e}_3\)</span> et un rayon <span class="math notranslate nohighlight">\(R\)</span> pour sa section droite circulaire.</p></li>
+<li><p><strong>Surfaces principales</strong> (voir figure 1.1 ci-dessous):</p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(\Gamma_0\)</span> désigne la base inférieure du cylindre située dans le plan <span class="math notranslate nohighlight">\(x_3 = 0\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\Gamma_1\)</span> désigne la base supérieure du cylindre située dans le plan <span class="math notranslate nohighlight">\(x_3 = H\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\Gamma_l\)</span> représente la surface latérale du cylindre.</p></li>
+</ul>
+</li>
+<li><p><strong>Point de référence</strong> : Le point <span class="math notranslate nohighlight">\(O\)</span> est le centre de la base <span class="math notranslate nohighlight">\(\Gamma_0\)</span>.</p></li>
+</ul>
+</div></blockquote>
+<p><img alt="Illustration du cylindre et de ses surfaces" src="../_images/cylindre.png" />
+<em>Figure 1.1 : Représentation du cylindre avec ses surfaces principales.</em></p>
+<blockquote>
+<div><p>Le cylindre est élastique, homogène et isotrope, caractérisé par un module de Young <span class="math notranslate nohighlight">\(E\)</span> et un coefficient de Poisson <span class="math notranslate nohighlight">\(\nu\)</span>. Il est supposé pesant, avec une masse volumique <span class="math notranslate nohighlight">\(\rho\)</span>. La base <span class="math notranslate nohighlight">\(\Gamma_0\)</span> est encastrée, tandis que les surfaces <span class="math notranslate nohighlight">\(\Gamma_1\)</span> (base supérieure) et <span class="math notranslate nohighlight">\(\Gamma_l\)</span> (surface latérale) sont supposées libres d’efforts.</p>
+</div></blockquote>
+<hr class="docutils" />
+<blockquote>
+<div><p>a. <strong>Traduire l’équilibre de la pièce et en déduire la résultante et le moment au point <span class="math notranslate nohighlight">\(O\)</span> du tenseur des efforts surfaciques exercés sur cette base.</strong></p>
+<p>Montrer que ce torseur est équivalent à une distribution d’efforts surfaciques uniforme de la forme <span class="math notranslate nohighlight">\(\boldsymbol{F}_s = P\boldsymbol{e}_3 \)</span>, où <span class="math notranslate nohighlight">\(P\)</span> étant un scalaire constant que l’on exprimera en fonction des données du problème.</p>
+</div></blockquote>
+<section id="traduisons-lequilibre">
+<h3>1.1 Traduisons l’équilibre :<a class="headerlink" href="#traduisons-lequilibre" title="Link to this heading">#</a></h3>
+<p>À partir des lois de l’équilibre, nous pouvons écrire les relations suivantes :</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{cases}
+\mathbf{R} + \mathbf{R}^*  = \mathbf{0} \\
+\mathbf{M}_O + \mathbf{M}_O^* = \mathbf{0}
+\end{cases}
+\end{split}\]</div>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\mathbf{R}^*\)</span> : résultante de la force poids</p></li>
+<li><p><span class="math notranslate nohighlight">\(\mathbf{M}_O^*\)</span> : moment résultant de la force poids en <span class="math notranslate nohighlight">\(O\)</span></p></li>
+</ul>
+<p>À l’équilibre, la résultante de la force poids <span class="math notranslate nohighlight">\(\mathbf{R}^*\)</span> est égale aux <strong>actions extérieures mécaniques surfaciques appliquées</strong> sur la base <span class="math notranslate nohighlight">\(\Gamma_0\)</span>. Ces actions s’expriment à travers le vecteur contrainte de Cauchy :
+$<span class="math notranslate nohighlight">\(
+\mathbf{T}|_{\Gamma_0} = \boldsymbol{\sigma}|_{\Gamma_0} \cdot \mathbf{n}, \quad \text{avec } \mathbf{n} = -\mathbf{e}_3.
+\)</span>$</p>
+</section>
+<section id="calcul-des-efforts">
+<h3>1.2 Calcul des efforts<a class="headerlink" href="#calcul-des-efforts" title="Link to this heading">#</a></h3>
+<p>Nous cherchons maintenant à déterminer la résultante <span class="math notranslate nohighlight">\(\mathbf{R}\)</span> et le moment <span class="math notranslate nohighlight">\(\mathbf{M}_O\)</span> des forces gravitaires agissant sur le cylindre.</p>
+<section id="resultante-des-forces">
+<h4>1.2.1 Résultante des forces<a class="headerlink" href="#resultante-des-forces" title="Link to this heading">#</a></h4>
+<p>La résultante des forces <span class="math notranslate nohighlight">\(\mathbf{R}\)</span> représente la somme vectorielle de toutes les forces de gravité agissant sur le cylindre. Nous la calculons à partir de son expression intégrale volumique :</p>
+<div class="math notranslate nohighlight">
+\[
+\mathbf{R} = \iiint_{\Omega} \rho g \mathbf{e}_3 \, d\Omega \quad (\text{car } \mathbf{R}^* = \iiint_{\Omega} -\rho g \mathbf{e}_3 \, d\Omega)
+\]</div>
+<p>Passons en coordonnées cylindriques pour effectuer les intégrations :</p>
+<div class="math notranslate nohighlight">
+\[
+\mathbf{R} = \iiint_{\Omega} \rho g \, r \, d\theta \, dr \, dz \, \mathbf{e}_3
+\]</div>
+<p>En séparant les intégrales, nous obtenons :</p>
+<div class="math notranslate nohighlight">
+\[
+\mathbf{R} = \rho g \int_0^R r \, dr \int_0^{2\pi} d\theta \int_0^H dz \, \mathbf{e}_3
+\]</div>
+<p>Ainsi, la résultante des forces gravitaires est donnée par :</p>
+<div class="math notranslate nohighlight">
+\[
+\mathbf{R} = \pi \rho g H R^2 \, \mathbf{e}_3
+\]</div>
+</section>
+<section id="moment-au-point-o">
+<h4>1.2.2 Moment au point <span class="math notranslate nohighlight">\(O\)</span><a class="headerlink" href="#moment-au-point-o" title="Link to this heading">#</a></h4>
+<p>Le moment <span class="math notranslate nohighlight">\(\mathbf{M}_O\)</span> représente l’effet de rotation des forces gravitaires autour du point <span class="math notranslate nohighlight">\(O\)</span>. Il s’exprime comme suit :</p>
+<div class="math notranslate nohighlight">
+\[
+\mathbf{M}_O = \iiint_{\Omega} (\mathbf{OM} \wedge \rho g \mathbf{e}_3) \, d\Omega \quad (\text{car } \mathbf{M}_O^* = \iiint_{\Omega} (\mathbf{OM} \wedge \rho g \mathbf{e}_3) \, d\Omega)
+\]</div>
+<p>La position <span class="math notranslate nohighlight">\(\mathbf{OM}\)</span> dans les coordonnées cylindriques est donnée par <span class="math notranslate nohighlight">\(\mathbf{OM} = r \mathbf{e}_r + z \mathbf{e}_3\)</span>. En insérant cette expression et en utilisant <span class="math notranslate nohighlight">\(\mathbf{e}_r \wedge \mathbf{e}_3 = -\mathbf{e}_\theta\)</span> et <span class="math notranslate nohighlight">\(\mathbf{e}_3 \wedge \mathbf{e}_3 = \mathbf{0}\)</span>, nous obtenons :</p>
+<div class="math notranslate nohighlight">
+\[
+\mathbf{M}_O = \rho g \int_0^H dz \int_0^{2\pi} d\theta \int_0^R r \, dr (-r \mathbf{e}_\theta)
+\]</div>
+<p>Or, <span class="math notranslate nohighlight">\(\mathbf{e}_\theta = -\sin\theta \mathbf{e}_1 + \cos\theta \mathbf{e}_2\)</span>.<br />
+Les contributions intégrées sur <span class="math notranslate nohighlight">\(\theta \in [0, 2\pi]\)</span> s’annulent par symétrie, ce qui donne :</p>
+<div class="math notranslate nohighlight">
+\[
+\mathbf{M}_O = 0
+\]</div>
+</section>
+<section id="force-surfacique-sur-gamma-0">
+<h4>1.2.3 Force surfacique sur <span class="math notranslate nohighlight">\(\Gamma_0\)</span><a class="headerlink" href="#force-surfacique-sur-gamma-0" title="Link to this heading">#</a></h4>
+<p>La force surfacique uniforme sur la base <span class="math notranslate nohighlight">\(\Gamma_0\)</span> s’écrit :</p>
+<div class="math notranslate nohighlight">
+\[
+\mathbf{F}_s = P \mathbf{e}_3
+\]</div>
+<p>En intégrant sur <span class="math notranslate nohighlight">\(\Gamma_0\)</span> (aire <span class="math notranslate nohighlight">\(S = \pi R^2\)</span>), la résultante est donnée par :</p>
+<div class="math notranslate nohighlight">
+\[
+\iint_{\Gamma_0} \mathbf{F}_s \, ds = P S \mathbf{e}_3 = \mathbf{R} \quad \text{(CQFD)}
+\]</div>
+<p>Substituons <span class="math notranslate nohighlight">\(\mathbf{R} = \pi \rho g H R^2 \mathbf{e}_3\)</span> et simplifions :</p>
+<div class="math notranslate nohighlight">
+\[
+P = \rho g H
+\]</div>
+<p>Ainsi, le torseur est équivalent à une distribution uniforme <span class="math notranslate nohighlight">\(\mathbf{F}_s = P \mathbf{e}_3\)</span> où <span class="math notranslate nohighlight">\(P = \rho g H\)</span>.</p>
+<blockquote>
+<div><ol class="arabic simple" start="2">
+<li><p><strong>Pour construire une solution analytique du problème, nous considérons à partir de maintenant le problème d’équilibre obtenu en &gt;remplaçant la condition d’encastrement sur <span class="math notranslate nohighlight">\(\Gamma_0\)</span> par une condition aux limites en efforts.</strong><br />
+La base <span class="math notranslate nohighlight">\(\Gamma_0\)</span> est désormais supposée soumise à une densité surfacique d’efforts uniforme :<br />
+$<span class="math notranslate nohighlight">\(
+ \mathbf{F}_s = P \boldsymbol{e}_3,
+ \)</span>$<br />
+déterminée dans la question précédente.</p></li>
+</ol>
+<ul class="simple">
+<li><p>Écrire les équations du problème et les nouvelles conditions aux limites associées.</p></li>
+<li><p>Vérifier si ce problème est régulier. Si oui, préciser de quel type.</p></li>
+<li><p>Définir les espaces des champs admissibles cinématiquement, <span class="math notranslate nohighlight">\({U}_{ad}\)</span>, et statiquement, <span class="math notranslate nohighlight">\(\Sigma_{ad}\)</span>, pour ce problème.</p></li>
+</ul>
+</div></blockquote>
+</section>
+</section>
+</section>
+<section id="equations-du-probleme-d-elastostatique-avec-chargement-poids-propre-force-surfacique-sur-gamma-0">
+<h2>2. Équations du problème d’élastostatique avec chargement (poids propre + force surfacique sur <span class="math notranslate nohighlight">\(\Gamma_0\)</span>)<a class="headerlink" href="#equations-du-probleme-d-elastostatique-avec-chargement-poids-propre-force-surfacique-sur-gamma-0" title="Link to this heading">#</a></h2>
+<section id="equilibre-local">
+<h3>2.1 Équilibre local<a class="headerlink" href="#equilibre-local" title="Link to this heading">#</a></h3>
+<p>Dans le domaine <span class="math notranslate nohighlight">\(\Omega\)</span>, l’équation d’équilibre local est donnée par :</p>
+<div class="math notranslate nohighlight">
+\[
+\rho \mathbf{F}_v + \mathrm{div} \, \boldsymbol{\sigma} = \mathbf{0},
+\]</div>
+<p>où la force volumique <span class="math notranslate nohighlight">\(\mathbf{F}_v\)</span> représente l’effet de la gravité <span class="math notranslate nohighlight">\(\mathbf{g}\)</span>, donnée par <span class="math notranslate nohighlight">\(\mathbf{F}_v = -g \mathbf{e}_3\)</span>. Ainsi, l’équation s’écrit :</p>
+<div class="math notranslate nohighlight">
+\[
+-\rho g \mathbf{e}_3 + \mathrm{div} \, \boldsymbol{\sigma} = \mathbf{0}.
+\]</div>
+</section>
+<section id="loi-de-comportement">
+<h3>2.2 Loi de comportement<a class="headerlink" href="#loi-de-comportement" title="Link to this heading">#</a></h3>
+<p>La loi de comportement élastique linéaire est donnée par la relation entre le tenseur des contraintes <span class="math notranslate nohighlight">\(\boldsymbol{\sigma}\)</span> et le tenseur des déformations <span class="math notranslate nohighlight">\(\boldsymbol{\varepsilon}\)</span> :</p>
+<div class="math notranslate nohighlight">
+\[
+\boldsymbol{\sigma} = \lambda (\mathrm{tr} \, \boldsymbol{\varepsilon}) \mathbf{1} + 2 \mu \boldsymbol{\varepsilon},
+\]</div>
+<p>où :</p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(\lambda\)</span> et <span class="math notranslate nohighlight">\(\mu\)</span> sont les coefficients de Lamé, définis par :
+$<span class="math notranslate nohighlight">\(
+\mu = \frac{E}{2(1+\nu)}, \quad \lambda = \frac{E\nu}{(1+\nu)(1-2\nu)},
+\)</span>$</p>
+<p>avec <span class="math notranslate nohighlight">\(E\)</span> le module de Young et <span class="math notranslate nohighlight">\(\nu\)</span> le coefficient de Poisson.</p>
+</li>
+</ul>
+<p>Le tenseur des déformations <span class="math notranslate nohighlight">\(\boldsymbol{\varepsilon}\)</span> est exprimé en fonction du déplacement <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> comme :</p>
+<div class="math notranslate nohighlight">
+\[
+\boldsymbol{\varepsilon}(\mathbf{u}) = \frac{1}{2} \left( \nabla \mathbf{u} + \nabla \mathbf{u}^\top \right).
+\]</div>
+</section>
+<section id="conditions-aux-limites">
+<h3>2.3 Conditions aux limites<a class="headerlink" href="#conditions-aux-limites" title="Link to this heading">#</a></h3>
+<ul>
+<li><p><strong>Sur la base <span class="math notranslate nohighlight">\(\Gamma_0\)</span> (pour <span class="math notranslate nohighlight">\(x_3 = 0\)</span>)</strong></p>
+<p>La base est soumise à une force surfacique uniforme <span class="math notranslate nohighlight">\(\mathbf{F}_s\)</span> donnée par <span class="math notranslate nohighlight">\(\mathbf{F}_s = P \mathbf{e}_3\)</span>. En mécanique des milieux continus, le vecteur force surfacique est défini par le vecteur contrainte de Cauchy <span class="math notranslate nohighlight">\(\mathbf{T}\)</span>, qui s’exprime comme :</p>
+<div class="math notranslate nohighlight">
+\[
+  \mathbf{T}|_{\Gamma_0} = \boldsymbol{\sigma}|_{\Gamma_0} \cdot \mathbf{n},
+  \]</div>
+<p>où <span class="math notranslate nohighlight">\(\mathbf{n}\)</span> est la normale unitaire à <span class="math notranslate nohighlight">\(\Gamma_0\)</span>. Sur la base <span class="math notranslate nohighlight">\(\Gamma_0\)</span>, on a <span class="math notranslate nohighlight">\(\mathbf{n} = -\mathbf{e}_3\)</span>, ce qui donne :</p>
+<div class="math notranslate nohighlight">
+\[
+  \mathbf{T}|_{\Gamma_0} = \boldsymbol{\sigma}|_{\Gamma_0} \cdot (-\mathbf{e}_3) = P \mathbf{e}_3.
+  \]</div>
+<p>En contractant avec <span class="math notranslate nohighlight">\(\mathbf{e}_3\)</span>, on obtient finalement :</p>
+<div class="math notranslate nohighlight">
+\[
+  \mathbf{T}|_{\Gamma_0} \cdot \mathbf{e}_3 = -P.
+  \]</div>
+</li>
+<li><p><strong>Sur la base supérieure <span class="math notranslate nohighlight">\(\Gamma_1\)</span> (pour <span class="math notranslate nohighlight">\(x_3 = H\)</span>)</strong></p>
+<p>La base supérieure est libre d’efforts :
+$<span class="math notranslate nohighlight">\(
+\boldsymbol{\sigma}|_{\Gamma_1} \cdot \mathbf{n} = \mathbf{0}, \quad \text{avec } \mathbf{n} = \mathbf{e}_3.
+\)</span>$</p>
+</li>
+<li><p><strong>Sur la surface latérale <span class="math notranslate nohighlight">\(\Gamma_l\)</span> (pour <span class="math notranslate nohighlight">\(r = R\)</span>)</strong></p>
+<p>La surface latérale est libre d’efforts :
+$<span class="math notranslate nohighlight">\(
+\boldsymbol{\sigma}|_{\Gamma_l} \cdot \mathbf{n} = \mathbf{0}, \quad \text{avec } \mathbf{n} = \mathbf{e}_r.
+\)</span>$</p>
+</li>
+</ul>
+</section>
+<section id="etude-de-la-regularite-et-des-espaces-admissibles">
+<h3>2.4 Étude de la régularité et des espaces admissibles<a class="headerlink" href="#etude-de-la-regularite-et-des-espaces-admissibles" title="Link to this heading">#</a></h3>
+<section id="regularite-du-probleme">
+<h4>2.4.1 Régularité du problème<a class="headerlink" href="#regularite-du-probleme" title="Link to this heading">#</a></h4>
+<p>Dans ce problème, nous cherchons le couple solution <span class="math notranslate nohighlight">\((\boldsymbol{\sigma}, \mathbf{u})\)</span> tel que ce problème soit bien posé.</p>
+<p>Le problème est-il régulier ? <strong>Oui.</strong></p>
+<p>Il est de <strong>type 2</strong>, car on connaît en tout point de la frontière les données scalaires du vecteur contrainte.</p>
+</section>
+<section id="definition-des-espaces-admissibles">
+<h4>2.4.2 Définition des espaces admissibles**<a class="headerlink" href="#definition-des-espaces-admissibles" title="Link to this heading">#</a></h4>
+<p><strong>a. Espaces cinématiquement admissible</strong></p>
+<p>L’espace des champs admissibles cinématiquement est défini par :</p>
+<div class="math notranslate nohighlight">
+\[
+U_{ad} = \{ \mathbf{v} \mid \mathbf{v} \text{ régulier} \}.
+\]</div>
+<p>Dans ce problème, il n’y a pas de condition limite en déplacement spécifique (propre à un problème de type 2).</p>
+<p><strong>b. Espaces statiquement admissible</strong></p>
+<p>L’espace des champs admissibles statiquement est défini par :</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\Sigma_{ad} = \left\{ \boldsymbol{\tau} \, \middle| \,
+\begin{aligned}
+&amp; \boldsymbol{\tau} \text{ régulier et symétrique,} \\
+&amp; \mathrm{div} \, \boldsymbol{\tau} -\rho g \mathbf{e}_3 = 0 \, \text{dans } \Omega, \\
+&amp; \mathbf{T}|_{\Gamma_0} = P\mathbf{e}_3, \\
+&amp; \mathbf{T}|_{\Gamma_1} = \mathbf{0},  \\
+&amp; \mathbf{T}|_{\Gamma_l} = \mathbf{0}
+\end{aligned}
+\right\}.
+\end{split}\]</div>
+<blockquote>
+<div><ol class="arabic simple" start="3">
+<li><p><strong>On se propose de rechercher la solution en contrainte de ce nouveau problème sous la forme :</strong>
+$<span class="math notranslate nohighlight">\(\boldsymbol{\sigma}(x_1, x_2, x_3) = \sigma_{33}(x_1, x_2, x_3) \boldsymbol{e}_3 \otimes \boldsymbol{e_3}.\)</span>$</p></li>
+</ol>
+<ul class="simple">
+<li><p>À quelle(s) condition(s) un tel champ est-il statiquement admissible pour ce problème ?</p></li>
+</ul>
+</div></blockquote>
+</section>
+</section>
+</section>
+<section id="recherche-de-la-solution-en-contrainte">
+<h2>3. Recherche de la solution en contrainte<a class="headerlink" href="#recherche-de-la-solution-en-contrainte" title="Link to this heading">#</a></h2>
+<p>Nous recherchons une solution en contrainte sous la forme :</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\boldsymbol{\sigma} =
+\begin{bmatrix}
+0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; \sigma_{33}(x_1, x_2, x_3)
+\end{bmatrix}.
+\end{split}\]</div>
+<p><strong>Approche en contrainte</strong></p>
+<ol class="arabic simple">
+<li><p><strong>Choix d’un champ admissible</strong> :<br />
+On choisit <span class="math notranslate nohighlight">\(\boldsymbol{\sigma} \in \Sigma_{ad}\)</span>.</p></li>
+<li><p><strong>Calcul du tenseur des déformations <span class="math notranslate nohighlight">\(\boldsymbol{\varepsilon}\)</span></strong> :<br />
+Le tenseur <span class="math notranslate nohighlight">\(\boldsymbol{\varepsilon}\)</span> est calculé à partir de la loi de comportement (relation entre <span class="math notranslate nohighlight">\(\boldsymbol{\sigma}\)</span> et <span class="math notranslate nohighlight">\(\boldsymbol{\varepsilon}\)</span>).</p></li>
+<li><p><strong>Calcul du champ de déplacement <span class="math notranslate nohighlight">\(\mathbf{u}\)</span></strong> :<br />
+Le champ <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> est obtenu par intégration du tenseur <span class="math notranslate nohighlight">\(\boldsymbol{\varepsilon}\)</span>, tout en vérifiant les équations de compatibilité.</p></li>
+</ol>
+<p><strong>Remarque</strong> : Si les conditions aux limites sur les déplacements ne sont pas satisfaites, il peut être nécessaire de modifier <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> ou de vérifier les contraintes supplémentaires sur <span class="math notranslate nohighlight">\(\Sigma_{ad}\)</span>.</p>
+</section>
+<section id="resolution-du-probleme-d-elastostatique-calcul-de-boldsymbol-sigma-33">
+<h2>3.1. Résolution du problème d’élastostatique : Calcul de <span class="math notranslate nohighlight">\(\boldsymbol{\sigma}_{33}\)</span><a class="headerlink" href="#resolution-du-probleme-d-elastostatique-calcul-de-boldsymbol-sigma-33" title="Link to this heading">#</a></h2>
+<section id="equation-de-divergence">
+<h3>3.1.1 Équation de divergence<a class="headerlink" href="#equation-de-divergence" title="Link to this heading">#</a></h3>
+<p>En utilisant l’expression simplifiée du tenseur des contraintes <span class="math notranslate nohighlight">\(\boldsymbol{\sigma}\)</span>, nous avons :</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\boldsymbol{\sigma} =
+\begin{bmatrix}
+0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; \sigma_{33}
+\end{bmatrix},
+\end{split}\]</div>
+<p>et la condition d’équilibre local <span class="math notranslate nohighlight">\(\mathrm{div} \, \boldsymbol{\sigma} = \rho g \mathbf{e}_3\)</span> donne :</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\mathrm{div} \, \boldsymbol{\sigma} =
+\begin{bmatrix}
+0\\
+0 \\
+\frac{\partial \sigma_{33}}{\partial x_3} 
+\end{bmatrix}
+= \rho g \mathbf{e}_3.
+\end{split}\]</div>
+<p>Ainsi :</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{\partial \sigma_{33}}{\partial x_3} = \rho g.
+\]</div>
+<p>En intégrant, on obtient :</p>
+<div class="math notranslate nohighlight">
+\[
+\sigma_{33} = \rho g x_3 + f(x_1, x_2),
+\]</div>
+<p>où <span class="math notranslate nohighlight">\(f(x_1, x_2)\)</span> est une fonction à déterminer.</p>
+</section>
+<section id="id1">
+<h3>3.1.2 Conditions aux limites<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<p><strong>Sur la base <span class="math notranslate nohighlight">\(\Gamma_1\)</span> (pour <span class="math notranslate nohighlight">\(x_3 = H\)</span>)</strong>, la base supérieure est libre d’efforts, donc :</p>
+<div class="math notranslate nohighlight">
+\[
+\boldsymbol{\sigma} \cdot \mathbf{n} = \mathbf{0}, \quad \text{avec } \mathbf{n} = \mathbf{e}_3.
+\]</div>
+<p>Cela implique :</p>
+<div class="math notranslate nohighlight">
+\[
+\sigma_{33}(x_3 = H) = 0.
+\]</div>
+<p>En remplaçant <span class="math notranslate nohighlight">\(x_3 = H\)</span> dans l’expression de <span class="math notranslate nohighlight">\(\sigma_{33}\)</span> :</p>
+<div class="math notranslate nohighlight">
+\[
+\rho g H + f(x_1, x_2) = 0 \quad \Rightarrow \quad f(x_1, x_2) = -\rho g H.
+\]</div>
+</section>
+<section id="expression-finale-de-sigma-33">
+<h3>3.1.3 Expression finale de <span class="math notranslate nohighlight">\(\sigma_{33}\)</span>**<a class="headerlink" href="#expression-finale-de-sigma-33" title="Link to this heading">#</a></h3>
+<p>En regroupant les résultats, <span class="math notranslate nohighlight">\(\sigma_{33}\)</span> s’écrit finalement :</p>
+<div class="math notranslate nohighlight">
+\[
+\sigma_{33} = \rho g (x_3 - H),
+\]</div>
+<p>où <span class="math notranslate nohighlight">\(x_3 \in [0, H]\)</span>.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="verifications">
+<h2>3.2 Vérifications<a class="headerlink" href="#verifications" title="Link to this heading">#</a></h2>
+<section id="condition-sur-gamma-1-pour-x-3-h">
+<h3>3.2.1 Condition sur <span class="math notranslate nohighlight">\(\Gamma_1\)</span> (pour <span class="math notranslate nohighlight">\(x_3 = H\)</span>)<a class="headerlink" href="#condition-sur-gamma-1-pour-x-3-h" title="Link to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[
+\sigma_{33}(x_3 = H) = \rho g (H - H) = 0 \quad \text{✔️}
+\]</div>
+</section>
+<section id="condition-sur-gamma-0-pour-x-3-0">
+<h3>3.2.2 Condition sur <span class="math notranslate nohighlight">\(\Gamma_0\)</span> (pour <span class="math notranslate nohighlight">\(x_3 = 0\)</span>)<a class="headerlink" href="#condition-sur-gamma-0-pour-x-3-0" title="Link to this heading">#</a></h3>
+<div class="math notranslate nohighlight">
+\[
+\sigma_{33}(x_3 = 0) = \rho g (0 - H) = -\rho g H \quad \text{✔️}
+\]</div>
+</section>
+<section id="condition-sur-gamma-l-surface-laterale">
+<h3>3.2.3 Condition sur <span class="math notranslate nohighlight">\(\Gamma_l\)</span> (surface latérale)<a class="headerlink" href="#condition-sur-gamma-l-surface-laterale" title="Link to this heading">#</a></h3>
+<p>Sur <span class="math notranslate nohighlight">\(\Gamma_l\)</span>, la normale est <span class="math notranslate nohighlight">\(\mathbf{n} = \mathbf{e}_r = \cos \theta \, \mathbf{e}_1 + \sin \theta \, \mathbf{e}_2\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[
+\boldsymbol{\sigma} \cdot \mathbf{e}_r = 0 \quad \text{✔️}
+\]</div>
+</section>
+</section>
+<section id="conclusion">
+<h2>3.3 Conclusion<a class="headerlink" href="#conclusion" title="Link to this heading">#</a></h2>
+<p>L’expression <span class="math notranslate nohighlight">\(\sigma_{33} = \rho g (x_3 - H)\)</span> respecte toutes les conditions aux limites du problème.</p>
+<blockquote>
+<div><ol class="arabic simple" start="4">
+<li><p><strong>Déterminer le champ de déformations associé à ce champ de contraintes.</strong></p></li>
+</ol>
+<ul class="simple">
+<li><p>Existe-t-il un champ de déplacement qui en dérive ?</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="calcul-de-boldsymbol-varepsilon-et-verification-de-la-compatibilite">
+<h2>4. Calcul de <span class="math notranslate nohighlight">\(\boldsymbol{\varepsilon}\)</span> et vérification de la compatibilité<a class="headerlink" href="#calcul-de-boldsymbol-varepsilon-et-verification-de-la-compatibilite" title="Link to this heading">#</a></h2>
+<section id="expression-de-boldsymbol-varepsilon">
+<h3>4.1 Expression de <span class="math notranslate nohighlight">\(\boldsymbol{\varepsilon}\)</span><a class="headerlink" href="#expression-de-boldsymbol-varepsilon" title="Link to this heading">#</a></h3>
+<p>La loi de comportement donne le tenseur des déformations <span class="math notranslate nohighlight">\(\boldsymbol{\varepsilon}\)</span> en fonction de <span class="math notranslate nohighlight">\(\boldsymbol{\sigma}\)</span> comme suit :</p>
+<div class="math notranslate nohighlight">
+\[
+\boldsymbol{\varepsilon} = \frac{1 + \nu}{E} \boldsymbol{\sigma} - \frac{\nu}{E} \, \text{tr}(\boldsymbol{\sigma}) \, \mathbf{1},
+\]</div>
+<p>où <span class="math notranslate nohighlight">\(\mathbf{1}\)</span> est le tenseur identité, <span class="math notranslate nohighlight">\(\nu\)</span> le coefficient de Poisson, et <span class="math notranslate nohighlight">\(E\)</span> le module de Young.</p>
+<p>En remplaçant le tenseur des contraintes <span class="math notranslate nohighlight">\(\boldsymbol{\sigma}\)</span> :</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\boldsymbol{\sigma} =
+\begin{bmatrix}
+0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; \sigma_{33}
+\end{bmatrix},
+\end{split}\]</div>
+<p>on obtient :</p>
+<div class="math notranslate nohighlight">
+\[
+\text{tr}(\boldsymbol{\sigma}) = \sigma_{33}.
+\]</div>
+<p>Donc, le tenseur <span class="math notranslate nohighlight">\(\boldsymbol{\varepsilon}\)</span> devient :</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\boldsymbol{\varepsilon} =
+\frac{1 + \nu}{E}
+\begin{bmatrix}
+0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; \sigma_{33}
+\end{bmatrix}
+- \frac{\nu}{E}
+\begin{bmatrix}
+\sigma_{33} &amp; 0 &amp; 0 \\
+0 &amp; \sigma_{33} &amp; 0 \\
+0 &amp; 0 &amp; \sigma_{33}
+\end{bmatrix}.
+\end{split}\]</div>
+<p>En simplifiant :</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\boldsymbol{\varepsilon} =
+\begin{bmatrix}
+-\frac{\nu \sigma_{33}}{E} &amp; 0 &amp; 0 \\
+0 &amp; -\frac{\nu \sigma_{33}}{E} &amp; 0 \\
+0 &amp; 0 &amp; \frac{\sigma_{33}}{E}
+\end{bmatrix}.
+\end{split}\]</div>
+</section>
+<hr class="docutils" />
+<section id="expression-finale-de-boldsymbol-varepsilon-en-fonction-de-x-3">
+<h3>4.2 Expression finale de <span class="math notranslate nohighlight">\(\boldsymbol{\varepsilon}\)</span> en fonction de <span class="math notranslate nohighlight">\(x_3\)</span><a class="headerlink" href="#expression-finale-de-boldsymbol-varepsilon-en-fonction-de-x-3" title="Link to this heading">#</a></h3>
+<p>En remplaçant <span class="math notranslate nohighlight">\(\sigma_{33} = \rho g (x_3 - H)\)</span> dans l’expression de <span class="math notranslate nohighlight">\(\boldsymbol{\varepsilon}\)</span>, on obtient :</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\boldsymbol{\varepsilon} =
+\begin{bmatrix}
+-\frac{\nu}{E} \rho g (x_3 - H) &amp; 0 &amp; 0 \\
+0 &amp; -\frac{\nu}{E} \rho g (x_3 - H) &amp; 0 \\
+0 &amp; 0 &amp; \frac{1}{E} \rho g (x_3 - H)
+\end{bmatrix}.
+\end{split}\]</div>
+</section>
+<hr class="docutils" />
+<section id="verification-des-equations-de-compatibilite">
+<h3>4.3 Vérification des équations de compatibilité<a class="headerlink" href="#verification-des-equations-de-compatibilite" title="Link to this heading">#</a></h3>
+<p>Pour le champ de déformations <span class="math notranslate nohighlight">\(\boldsymbol{\varepsilon}\)</span>, seules les composantes diagonales (<span class="math notranslate nohighlight">\(\varepsilon_{11}\)</span>, <span class="math notranslate nohighlight">\(\varepsilon_{22}\)</span>, <span class="math notranslate nohighlight">\(\varepsilon_{33}\)</span>) sont non nulles. Vérifions les équations de compatibilité pour ces composantes :</p>
+<ol class="arabic simple">
+<li><p><strong>Pour <span class="math notranslate nohighlight">\(\varepsilon_{33,33}\)</span></strong> :<br />
+L’équation de compatibilité devient :<br />
+<span class="math notranslate nohighlight">\( \varepsilon_{33,33} + \varepsilon_{33,33} = \varepsilon_{33,33} + \varepsilon_{33,33} \)</span>.<br />
+Cette égalité est triviale et toujours vérifiée.</p></li>
+<li><p><strong>Pour <span class="math notranslate nohighlight">\(\varepsilon_{11,33}\)</span> et <span class="math notranslate nohighlight">\(\varepsilon_{22,33}\)</span></strong> :<br />
+Les composantes <span class="math notranslate nohighlight">\(\varepsilon_{11}\)</span> et <span class="math notranslate nohighlight">\(\varepsilon_{22}\)</span> dépendent linéairement de <span class="math notranslate nohighlight">\(x_3\)</span>, donc leurs dérivées secondes sont nulles :<br />
+<span class="math notranslate nohighlight">\( \varepsilon_{11,33} = 0 \quad \text{et} \quad \varepsilon_{22,33} = 0 \)</span>.<br />
+Ces égalités satisfont l’équation de compatibilité.</p></li>
+<li><p><strong>Pour les autres composantes comme <span class="math notranslate nohighlight">\(\varepsilon_{33,22}\)</span>, <span class="math notranslate nohighlight">\(\varepsilon_{33,11}\)</span>, <span class="math notranslate nohighlight">\(\varepsilon_{11,22}\)</span>, <span class="math notranslate nohighlight">\(\varepsilon_{11,11}\)</span> et <span class="math notranslate nohighlight">\(\varepsilon_{22,22}\)</span></strong> :<br />
+Puisque <span class="math notranslate nohighlight">\(\boldsymbol{\varepsilon}\)</span> dépend uniquement de <span class="math notranslate nohighlight">\(x_3\)</span> comme variable, toutes ces dérivées mixtes ou de second ordre dans <span class="math notranslate nohighlight">\(x_1\)</span> et <span class="math notranslate nohighlight">\(x_2\)</span> sont nulles. Ces composantes n’apportent donc aucune contrainte supplémentaire à vérifier.</p></li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="id2">
+<h3>4.4 Conclusion<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
+<p>Les équations de compatibilité sont toutes satisfaites pour le champ de déformations <span class="math notranslate nohighlight">\(\boldsymbol{\varepsilon}\)</span> proposé. Cela implique que ce champ de déformations est <strong>géométriquement cohérent</strong>, c’est-à-dire qu’il peut être associé à un champ de déplacement <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> continu et régulier dans l’ensemble du domaine.</p>
+<p>Ce résultat garantit que la solution obtenue pour <span class="math notranslate nohighlight">\(\boldsymbol{\varepsilon}\)</span> respecte les lois géométriques de la mécanique des milieux continus. Autrement dit, il n’y a pas d’incohérences ou de distorsions impossibles dans le matériau, et le champ <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> est <strong>réalisable</strong> (il correspond bien à une déformation physique possible).</p>
+<hr class="docutils" />
+<blockquote>
+<div><ol class="arabic simple" start="5">
+<li><p><strong>Calculer le champ de déplacement associé s’il existe.</strong></p></li>
+</ol>
+<ul class="simple">
+<li><p>Le problème résolu admet-il un couple <span class="math notranslate nohighlight">\((\sigma, u)\)</span> solution unique ? Commenter par rapport au problème initial.</p></li>
+</ul>
+</div></blockquote>
+</section>
+</section>
+<section id="integration-de-boldsymbol-varepsilon-pour-trouver-mathbf-u">
+<h2>5. Intégration de <span class="math notranslate nohighlight">\(\boldsymbol{\varepsilon}\)</span> pour trouver <span class="math notranslate nohighlight">\(\mathbf{u}\)</span><a class="headerlink" href="#integration-de-boldsymbol-varepsilon-pour-trouver-mathbf-u" title="Link to this heading">#</a></h2>
+<p>Le tenseur des déformations <span class="math notranslate nohighlight">\(\boldsymbol{\varepsilon}\)</span> est diagonal et donné par :</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\boldsymbol{\varepsilon} =
+\begin{bmatrix}
+\varepsilon_{11} &amp; 0 &amp; 0 \\
+0 &amp; \varepsilon_{22} &amp; 0 \\
+0 &amp; 0 &amp; \varepsilon_{33}
+\end{bmatrix},
+\end{split}\]</div>
+<p>avec :</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\varepsilon_{11} = \varepsilon_{22} = -\frac{\nu}{E} \rho g (x_3 - H)\)</span>,</p></li>
+<li><p><span class="math notranslate nohighlight">\(\varepsilon_{33} = \frac{1}{E} \rho g (x_3 - H)\)</span>.</p></li>
+</ul>
+<hr class="docutils" />
+<section id="relations-entre-les-deformations-et-les-deplacements">
+<h3>5.1 Relations entre les déformations et les déplacements<a class="headerlink" href="#relations-entre-les-deformations-et-les-deplacements" title="Link to this heading">#</a></h3>
+<p>Les relations entre le tenseur des déformations <span class="math notranslate nohighlight">\(\boldsymbol{\varepsilon}\)</span> et le champ de déplacement <span class="math notranslate nohighlight">\(\mathbf{u} = (u_1, u_2, u_3)\)</span> sont :</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(\varepsilon_{11} = \frac{\partial u_1}{\partial x_1}\)</span>,</p></li>
+<li><p><span class="math notranslate nohighlight">\(\varepsilon_{22} = \frac{\partial u_2}{\partial x_2}\)</span>,</p></li>
+<li><p><span class="math notranslate nohighlight">\(\varepsilon_{33} = \frac{\partial u_3}{\partial x_3}\)</span>,</p></li>
+<li><p><span class="math notranslate nohighlight">\(\varepsilon_{12} = \frac{1}{2} \left( \frac{\partial u_1}{\partial x_2} + \frac{\partial u_2}{\partial x_1} \right) = 0\)</span>,</p></li>
+<li><p><span class="math notranslate nohighlight">\(\varepsilon_{13} = \frac{1}{2} \left( \frac{\partial u_1}{\partial x_3} + \frac{\partial u_3}{\partial x_1} \right) = 0\)</span>,</p></li>
+<li><p><span class="math notranslate nohighlight">\(\varepsilon_{23} = \frac{1}{2} \left( \frac{\partial u_2}{\partial x_3} + \frac{\partial u_3}{\partial x_2} \right) = 0\)</span>.</p></li>
+</ol>
+<p>Les composantes hors diagonale du tenseur des déformations étant nulles (<span class="math notranslate nohighlight">\(\varepsilon_{12} = \varepsilon_{13} = \varepsilon_{23} = 0\)</span>), nous concluons que :</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{\partial u_1}{\partial x_2} = \frac{\partial u_2}{\partial x_1} = 0, \quad
+\frac{\partial u_1}{\partial x_3} = \frac{\partial u_3}{\partial x_1} = 0, \quad
+\frac{\partial u_2}{\partial x_3} = \frac{\partial u_3}{\partial x_2} = 0.
+\]</div>
+<hr class="docutils" />
+<section id="integration-des-equations">
+<h4>5.1.1 Intégration des équations<a class="headerlink" href="#integration-des-equations" title="Link to this heading">#</a></h4>
+<ol class="arabic simple">
+<li><p>Pour <span class="math notranslate nohighlight">\(\varepsilon_{11}\)</span> :
+$<span class="math notranslate nohighlight">\(
+\varepsilon_{11} = \frac{\partial u_1}{\partial x_1} = -\frac{\nu}{E} \rho g (x_3 - H).
+\)</span><span class="math notranslate nohighlight">\(
+Par intégration par rapport à \)</span>x_1<span class="math notranslate nohighlight">\(, on obtient :
+\)</span><span class="math notranslate nohighlight">\(
+u_1 = -\frac{\nu}{E} \rho g (x_3 - H) x_1 + f_1(x_2, x_3).
+\)</span>$</p></li>
+<li><p>Pour <span class="math notranslate nohighlight">\(\varepsilon_{22}\)</span> :
+$<span class="math notranslate nohighlight">\(
+\varepsilon_{22} = \frac{\partial u_2}{\partial x_2} = -\frac{\nu}{E} \rho g (x_3 - H).
+\)</span><span class="math notranslate nohighlight">\(
+Par intégration par rapport à \)</span>x_2<span class="math notranslate nohighlight">\(, on obtient :
+\)</span><span class="math notranslate nohighlight">\(
+u_2 = -\frac{\nu}{E} \rho g (x_3 - H) x_2 + f_2(x_1, x_3).
+\)</span>$</p></li>
+<li><p>Pour <span class="math notranslate nohighlight">\(\varepsilon_{33}\)</span> :
+$<span class="math notranslate nohighlight">\(
+\varepsilon_{33} = \frac{\partial u_3}{\partial x_3} = \frac{1}{E} \rho g (x_3 - H).
+\)</span><span class="math notranslate nohighlight">\(
+Par intégration par rapport à \)</span>x_3<span class="math notranslate nohighlight">\(, on obtient :
+\)</span><span class="math notranslate nohighlight">\(
+u_3 = \frac{1}{E} \rho g \frac{(x_3 - H)^2}{2} + f_3(x_1, x_2).
+\)</span>$</p></li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="expressions-finales-du-champ-de-deplacement">
+<h4>5.1.2 Expressions finales du champ de déplacement<a class="headerlink" href="#expressions-finales-du-champ-de-deplacement" title="Link to this heading">#</a></h4>
+<p>En regroupant les résultats, le champ de déplacement s’écrit :</p>
+<div class="math notranslate nohighlight">
+\[
+u_1 = -\frac{\nu}{E} \rho g (x_3 - H) x_1 + f_1(x_2, x_3),
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+u_2 = -\frac{\nu}{E} \rho g (x_3 - H) x_2 + f_2(x_1, x_3),
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+u_3 = \frac{1}{E} \rho g \frac{(x_3 - H)^2}{2} + f_3(x_1, x_2).
+\]</div>
+</section>
+<hr class="docutils" />
+<section id="exploitation-de-1-2-3-dans-4-5-6">
+<h4>5.1.3 Exploitation de (1’), (2’), (3’) dans (4), (5), (6)<a class="headerlink" href="#exploitation-de-1-2-3-dans-4-5-6" title="Link to this heading">#</a></h4>
+<ol class="arabic simple">
+<li><p><strong>(4’)</strong> :
+$<span class="math notranslate nohighlight">\(
+f_1(x_2, x_3)_{,2} + f_2(x_1, x_3)_{,1} = 0.
+\)</span>$</p></li>
+<li><p><strong>(5’)</strong> :
+$<span class="math notranslate nohighlight">\(
+f_1(x_2, x_3)_{,3} -\frac{\nu \rho g}{E}x_1 + f_3(x_1, x_2)_{,1} = 0.
+\)</span>$</p></li>
+<li><p><strong>(6’)</strong> :
+$<span class="math notranslate nohighlight">\(
+f_2(x_1, x_3)_{,3}-\frac{\nu \rho g}{E}x_2 + f_3(x_1, x_2)_{,2} = 0.
+\)</span>$</p></li>
+</ol>
+</section>
+</section>
+<hr class="docutils" />
+<section id="calcul-du-champ-de-deplacement">
+<h3>5.2 Calcul du champ de déplacement<a class="headerlink" href="#calcul-du-champ-de-deplacement" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Le champ de déplacement <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> a été calculé et décomposé en trois parties :</p>
+<ul>
+<li><p><strong>Déformation mécanique</strong>,</p></li>
+<li><p><strong>Rotation de corps rigide</strong>, et</p></li>
+<li><p><strong>Translation de corps rigide</strong>.</p></li>
+</ul>
+</li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\mathbf{u} =
+\begin{cases}
+u_1 = -\frac{\nu \rho g}{E} (x_3 - H) x_1 + a x_2 + b x_3 + d, \\
+u_2 = -\frac{\nu \rho g}{E} (x_3 - H) x_2 - a x_1 + f x_3 + h, \\
+u_3 = \frac{\rho g}{E} \left( \frac{x_3^2}{2} - H x_3 \right) + \frac{\nu \rho g}{E} \frac{x_1^2 + x_2^2}{2} + b x_1 - f x_2 + n.
+\end{cases}
+\end{split}\]</div>
+<ul class="simple">
+<li><p>Ce champ satisfait à la fois les <strong>équations de compatibilité</strong> et les <strong>conditions aux limites</strong> imposées, prouvant qu’il est admissible et géométriquement cohérent.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="unicite-de-la-solution-boldsymbol-sigma-mathbf-u">
+<h3>5.3 Unicité de la solution <span class="math notranslate nohighlight">\((\boldsymbol{\sigma}, \mathbf{u})\)</span><a class="headerlink" href="#unicite-de-la-solution-boldsymbol-sigma-mathbf-u" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p><strong>Dans le problème initial (encastrement sur <span class="math notranslate nohighlight">\(\Gamma_0\)</span>) :</strong></p>
+<ul class="simple">
+<li><p>La condition d’encastrement sur <span class="math notranslate nohighlight">\(\Gamma_0\)</span> imposait que les déplacements soient nuls :
+$<span class="math notranslate nohighlight">\(
+\mathbf{u} = 0 \quad \text{sur } \Gamma_0,
+\)</span>$
+éliminant toute contribution de rotation ou translation de corps rigide.</p></li>
+<li><p>Ainsi, pour le problème initial, la solution <span class="math notranslate nohighlight">\((\boldsymbol{\sigma}, \mathbf{u})\)</span> est <strong>unique</strong>.</p></li>
+</ul>
+</li>
+<li><p><strong>Dans le problème modifié (chargement en efforts sur <span class="math notranslate nohighlight">\(\Gamma_0\)</span>) :</strong></p>
+<ul class="simple">
+<li><p>En remplaçant la condition d’encastrement par un chargement en efforts uniformes, cette modification <strong>assouplit les contraintes sur les déplacements</strong>, ouvrant la porte à des solutions <strong>non uniques</strong> pour <span class="math notranslate nohighlight">\(\mathbf{u}\)</span>.</p></li>
+<li><p>Nous introduisons des <strong>degrés de liberté supplémentaires</strong> associés à la rotation et à la translation. Ces mouvements rigides ne sont pas contraints par les équations d’équilibre ni les conditions aux limites en efforts, rendant la solution <span class="math notranslate nohighlight">\((\boldsymbol{\sigma}, \mathbf{u})\)</span> <strong>non unique</strong>.</p></li>
+<li><p>Cela se manifeste par la présence des constantes :
+$<span class="math notranslate nohighlight">\(
+a, \, b, \, f, \, d, \, h, \, n,
+\)</span>$
+qui restent indéterminées.</p></li>
+</ul>
+</li>
+</ol>
+<hr class="docutils" />
+<p><strong>Commentaire sur l’unicité et les implications :</strong></p>
+<ol class="arabic simple">
+<li><p><strong>Problème initial (encastrement) :</strong></p>
+<ul class="simple">
+<li><p>La solution est <strong>unique</strong>, car l’encastrement élimine toute possibilité de mouvement rigide.</p></li>
+</ul>
+</li>
+<li><p><strong>Problème modifié (chargement en efforts) :</strong></p>
+<ul class="simple">
+<li><p>La solution n’est <strong>pas unique</strong>, car les conditions aux limites en efforts permettent des mouvements rigides non contraints.</p></li>
+</ul>
+</li>
+</ol>
+<section id="equations-derivees-de-4-5-6">
+<h4>5.3.1 Équations dérivées de (4’), (5’), (6’)<a class="headerlink" href="#equations-derivees-de-4-5-6" title="Link to this heading">#</a></h4>
+<p><strong>(4’’)</strong> :
+$<span class="math notranslate nohighlight">\(
+f_1(x_2, x_3)_{,22} = 0 \quad \text{et} \quad f_2(x_1, x_3)_{,11} = 0.
+\)</span>$</p>
+<p><strong>(5’’)</strong> :
+$<span class="math notranslate nohighlight">\(
+f_1(x_2, x_3)_{,33} = 0 \quad \text{et} \quad -\frac{\nu \rho g}{E} + f_3(x_1, x_2)_{,11} = 0.
+\)</span>$</p>
+<p><strong>(6’’)</strong> :
+$<span class="math notranslate nohighlight">\(
+-\frac{\nu \rho g}{E} + f_3(x_1, x_2)_{,22} = 0 \quad \text{et} \quad f_2(x_1, x_3)_{,33} = 0.
+\)</span>$</p>
+</section>
+<hr class="docutils" />
+<section id="exploitation-de-4-5-6">
+<h4>5.3.2 Exploitation de (4’’), (5’’), (6’’)<a class="headerlink" href="#exploitation-de-4-5-6" title="Link to this heading">#</a></h4>
+<p>En intégrant les équations (4’’) et (5’’), on obtient :</p>
+<ol class="arabic simple">
+<li><p>Pour <span class="math notranslate nohighlight">\(f_1(x_2, x_3)\)</span> :
+$<span class="math notranslate nohighlight">\(
+f_1(x_2, x_3) = ax_2 + bx_3 + c x_2 x_3 + d. \tag{7}
+\)</span>$</p></li>
+<li><p>Pour <span class="math notranslate nohighlight">\(f_2(x_1, x_3)\)</span> :
+$<span class="math notranslate nohighlight">\(
+f_2(x_1, x_3) = ex_1 + fx_3 + g x_1 x_3 + h. \tag{8}
+\)</span>$</p></li>
+<li><p>Pour <span class="math notranslate nohighlight">\(f_3(x_1, x_2)\)</span> :
+$<span class="math notranslate nohighlight">\(
+f_3(x_1, x_2) = \frac{\nu \rho g}{E} \frac{x_1^2 + x_2^2}{2} + i x_1 + l x_2 + m x_1 x_2 + n. \tag{9}
+\)</span>$</p></li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="injection-dans-4-5-6-de-7-8-et-9">
+<h4>5.3.3 Injection dans (4’), (5’), (6’) de (7), (8) et (9)<a class="headerlink" href="#injection-dans-4-5-6-de-7-8-et-9" title="Link to this heading">#</a></h4>
+<p><strong>Dans (4’)</strong>:
+$<span class="math notranslate nohighlight">\(
+a + c x_3 + e + g x_3 = 0,
+\)</span><span class="math notranslate nohighlight">\(
+ce qui donne :
+\)</span><span class="math notranslate nohighlight">\(
+a + l = 0 \quad \text{et} \quad c + g = 0.
+\)</span><span class="math notranslate nohighlight">\(
+soit :
+\)</span><span class="math notranslate nohighlight">\(
+l = -a \quad \text{et} \quad g = -c.
+\)</span>$</p>
+<p><strong>Dans (5’)</strong> :
+$<span class="math notranslate nohighlight">\(
+b + i = 0. \quad \text{et} \quad c+m = 0.
+\)</span><span class="math notranslate nohighlight">\(
+Ainsi :
+\)</span><span class="math notranslate nohighlight">\(
+i = -b \quad \text{et} \quad m = -c.
+\)</span>$</p>
+<p><strong>Dans (6’)</strong> :
+$<span class="math notranslate nohighlight">\(
+f + l = 0 \quad \text{et} \quad g + m = 0.
+\)</span><span class="math notranslate nohighlight">\(
+Ainsi :
+\)</span><span class="math notranslate nohighlight">\(
+m = -g \quad \text{et} \quad f = -l.
+\)</span>$</p>
+</section>
+<hr class="docutils" />
+<section id="integration-finale-pour-mathbf-u">
+<h4>5.3.4 Intégration finale pour <span class="math notranslate nohighlight">\(\mathbf{u}\)</span><a class="headerlink" href="#integration-finale-pour-mathbf-u" title="Link to this heading">#</a></h4>
+<p><span class="math notranslate nohighlight">\(
+u_1 = \color{rgb(127,0,127)}{-\frac{\nu \rho g}{E} (x_3 - H) x_1} + \color{rgb(0,127,0)}{a x_2} + \color{rgb(127,127,0)}{b x_3 + d}.
+\)</span></p>
+<p><span class="math notranslate nohighlight">\(
+u_2 = \color{rgb(127,0,127)}{-\frac{\nu \rho g}{E}(x_3-H)x_2}+\color{rgb(0,127,0)}{-ax_1}+\color{rgb(127,127,0)}{fx_3+h}
+\)</span></p>
+<p><span class="math notranslate nohighlight">\(
+u_3 = \color{rgb(127,0,127)}{\frac{\rho g}{E}\left(\frac{x_3^2}{2}-Hx_3\right)+\frac{\nu \rho g}{E}\frac{x_1^2+x_2^2}{2}}+\color{rgb(0,127,0)}{-bx_1-fx_2}+\color{rgb(127,127,0)}{n}.
+\)</span></p>
+<p><strong>Explications des couleurs</strong>:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\textcolor{rgb(127,0,127)}{\text{Partie liée à la déformation mécanique (effet des contraintes internes)}}\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\textcolor{rgb(0,127,0)}{\text{Partie liée à la rotation de corps rigide}}\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\textcolor{rgb(127,127,0)}{\text{Partie liée à la translation de corps rigide}}\)</span>.</p></li>
+</ul>
+<hr class="docutils" />
+<blockquote>
+<div><ol class="arabic simple" start="6">
+<li><p><strong>Déterminer le déplacement du point <span class="math notranslate nohighlight">\(O'\)</span>, centre de la face <span class="math notranslate nohighlight">\(\Gamma_1\)</span>, ainsi que la déformée de cette surface.</strong></p></li>
+</ol>
+</div></blockquote>
+</section>
+</section>
+</section>
+<section id="deplacement-du-point-m-0-sur-gamma-1">
+<h2>6. Déplacement du point <span class="math notranslate nohighlight">\(M_0\)</span> sur <span class="math notranslate nohighlight">\(\Gamma_1\)</span><a class="headerlink" href="#deplacement-du-point-m-0-sur-gamma-1" title="Link to this heading">#</a></h2>
+<p>Le point <span class="math notranslate nohighlight">\(M_0\)</span> appartient à la surface <span class="math notranslate nohighlight">\(\Gamma_1\)</span>, caractérisée par <span class="math notranslate nohighlight">\((r, \theta, x_3 = H)\)</span> en coordonnées cylindriques. Sa position initiale est donnée par :
+$<span class="math notranslate nohighlight">\(
+\mathbf{OM}_0 = r \mathbf{e}_r + H \mathbf{e}_3.
+\)</span>$</p>
+<p>Après déformation, sa position devient :
+$<span class="math notranslate nohighlight">\(
+\mathbf{OM} = \mathbf{OM}_0 + \mathbf{u}(M_0),
+\)</span><span class="math notranslate nohighlight">\(
+où \)</span>\mathbf{u}(M_0)<span class="math notranslate nohighlight">\( est le déplacement évalué sur \)</span>\Gamma_1<span class="math notranslate nohighlight">\( (\)</span>x_3 = H$).</p>
+<hr class="docutils" />
+<section id="calcul-du-deplacement-mathbf-u-sur-gamma-1">
+<h3>6.1 Calcul du déplacement <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> sur <span class="math notranslate nohighlight">\(\Gamma_1\)</span><a class="headerlink" href="#calcul-du-deplacement-mathbf-u-sur-gamma-1" title="Link to this heading">#</a></h3>
+<p>En utilisant le champ de déplacement <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> calculé précédemment :</p>
+<ol class="arabic simple">
+<li><p><strong>Composante selon <span class="math notranslate nohighlight">\(\mathbf{e}_r\)</span> (<span class="math notranslate nohighlight">\(u_r\)</span>) :</strong>
+La composante radiale est obtenue en coordonnées cylindriques. À <span class="math notranslate nohighlight">\(x_3 = H\)</span>, seule la déformation mécanique contribue :
+$<span class="math notranslate nohighlight">\(
+u_r = 0.
+\)</span>$</p></li>
+<li><p><strong>Composante selon <span class="math notranslate nohighlight">\(\mathbf{e}_\theta\)</span> (<span class="math notranslate nohighlight">\(u_\theta\)</span>) :</strong>
+Par symétrie du problème, il n’y a pas de dépendance angulaire (<span class="math notranslate nohighlight">\(\theta\)</span>), donc :
+$<span class="math notranslate nohighlight">\(
+u_\theta = 0.
+\)</span>$</p></li>
+<li><p><strong>Composante selon <span class="math notranslate nohighlight">\(\mathbf{e}_3\)</span> (<span class="math notranslate nohighlight">\(u_z\)</span>) :</strong>
+La composante verticale est obtenue en évaluant <span class="math notranslate nohighlight">\(u_3\)</span> sur <span class="math notranslate nohighlight">\(\Gamma_1\)</span> (<span class="math notranslate nohighlight">\(x_3 = H\)</span>) :
+$<span class="math notranslate nohighlight">\(
+u_z = \frac{\nu \rho g}{E} \frac{r^2}{2} - \frac{\rho g}{2E} H^2.
+\)</span>$</p></li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="position-apres-deformation">
+<h3>6.2 Position après déformation<a class="headerlink" href="#position-apres-deformation" title="Link to this heading">#</a></h3>
+<p>En combinant, la position du point <span class="math notranslate nohighlight">\(M_0\)</span> après déformation devient :
+$<span class="math notranslate nohighlight">\(
+\mathbf{OM} = \left(r \mathbf{e}_r + H \mathbf{e}_3\right) + \left(\frac{\nu \rho g}{E} \frac{r^2}{2} - \frac{\rho g}{2E} H^2\right) \mathbf{e}_3.
+\)</span>$</p>
+<p>Ou, explicitement :
+$<span class="math notranslate nohighlight">\(
+\mathbf{OM} = r \mathbf{e}_r + \left(H + \frac{\nu \rho g}{E} \frac{r^2}{2} - \frac{\rho g}{2E} H^2\right) \mathbf{e}_3.
+\)</span>$</p>
+</section>
+<hr class="docutils" />
+<section id="deformee-de-la-surface-gamma-1">
+<h3>6.3 Déformée de la surface <span class="math notranslate nohighlight">\(\Gamma_1\)</span><a class="headerlink" href="#deformee-de-la-surface-gamma-1" title="Link to this heading">#</a></h3>
+<p>La déformée de la surface <span class="math notranslate nohighlight">\(\Gamma_1\)</span> montre que :</p>
+<ol class="arabic simple">
+<li><p>La position radiale (<span class="math notranslate nohighlight">\(r \mathbf{e}_r\)</span>) reste inchangée, confirmant l’absence de déformation radiale.</p></li>
+<li><p>La position verticale (<span class="math notranslate nohighlight">\(\mathbf{e}_3\)</span>) subit un déplacement composé de :</p>
+<ul class="simple">
+<li><p>Un terme quadratique en <span class="math notranslate nohighlight">\(r^2\)</span>, lié à la déformation mécanique.</p></li>
+<li><p>Un terme constant en <span class="math notranslate nohighlight">\(H^2\)</span>, lié à l’effet global de la charge gravitaire.</p></li>
+</ul>
+</li>
+</ol>
+<p>La surface reste symétrique par rapport à l’axe <span class="math notranslate nohighlight">\(x_3\)</span> mais présente une courbure parabolique en raison de la dépendance en <span class="math notranslate nohighlight">\(r^2\)</span>.</p>
+</section>
+<hr class="docutils" />
+<section id="id3">
+<h3>6.4 Conclusion<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p><strong>Déplacement du centre <span class="math notranslate nohighlight">\(O'\)</span> de <span class="math notranslate nohighlight">\(\Gamma_1\)</span> :</strong>
+En posant <span class="math notranslate nohighlight">\(r = 0\)</span>, on retrouve :
+$<span class="math notranslate nohighlight">\(
+\mathbf{OM}' = H \mathbf{e}_3 - \frac{\rho g}{2E} H^2 \mathbf{e}_3.
+\)</span><span class="math notranslate nohighlight">\(
+Le point \)</span>O’<span class="math notranslate nohighlight">\( subit donc un déplacement vertical de :
+\)</span><span class="math notranslate nohighlight">\(
+u_z(O') = -\frac{\rho g}{2E} H^2.
+\)</span>$</p></li>
+<li><p><strong>Déplacement général sur <span class="math notranslate nohighlight">\(\Gamma_1\)</span> :</strong>
+La déformée de la surface <span class="math notranslate nohighlight">\(\Gamma_1\)</span> est donnée par :
+$<span class="math notranslate nohighlight">\(
+u_z(r) = \frac{\nu \rho g}{E} \frac{r^2}{2} - \frac{\rho g}{2E} H^2.
+\)</span>$</p></li>
+</ol>
+<p>La déformation est caractérisée par une courbure parabolique dans la direction verticale (<span class="math notranslate nohighlight">\(\mathbf{e}_3\)</span>). Elle prend la forme d’un paraboloïde de révolution orienté selon l’axe <span class="math notranslate nohighlight">\(\mathbf{e}_3\)</span>. Le sommet de ce paraboloïde est légèrement abaissé en raison du poids propre, ce qui est exprimé par le terme <span class="math notranslate nohighlight">\(-\frac{\rho g H^2}{2E}\)</span>. La courbure de la surface dépend des paramètres mécaniques du matériau, notamment le coefficient de Poisson (<span class="math notranslate nohighlight">\(\nu\)</span>), la masse volumique (<span class="math notranslate nohighlight">\(\rho\)</span>) et le module de Young (<span class="math notranslate nohighlight">\(E\)</span>).</p>
+<hr class="docutils" />
+<blockquote>
+<div><ol class="arabic simple" start="7">
+<li><p><strong>Calculer numériquement le déplacement <span class="math notranslate nohighlight">\(u_z(O')\)</span>, au centre de <span class="math notranslate nohighlight">\(\Gamma_1\)</span>, pour ces dimensions et propriétés mécaniques. Comparer ce résultat à celui obtenu à l’aide d’une simulation par éléments finis 3D. Interpréter les écarts éventuels.</strong></p></li>
+</ol>
+</div></blockquote>
+</section>
+</section>
+<section id="applications-numeriques">
+<h2>7. Applications numériques<a class="headerlink" href="#applications-numeriques" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Rayon <span class="math notranslate nohighlight">\(R = 0.1 \, \text{m}\)</span></p></li>
+<li><p>Hauteur <span class="math notranslate nohighlight">\(H = 0.5 \, \text{m}\)</span></p></li>
+<li><p>Module de Young <span class="math notranslate nohighlight">\(E = 210 \, \text{GPa}\)</span></p></li>
+<li><p>Coefficient de Poisson <span class="math notranslate nohighlight">\(\nu = 0.3\)</span></p></li>
+<li><p>Masse volumique <span class="math notranslate nohighlight">\(\rho = 7850 \, \text{kg/m}^3\)</span></p></li>
+</ul>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<img alt="../_images/7f893e0959f0abefec7650ccf668be36638df1a449127d64c0f16e664bf9d3f7.png" src="../_images/7f893e0959f0abefec7650ccf668be36638df1a449127d64c0f16e664bf9d3f7.png" />
+</div>
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \text{Déplacement maximal en}\, r=0 : u_{z0} = -4.584e-08\, \text{m}\]</div>
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./projet1"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../intro.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Bienvenue dans ce Projet Éducatif de Mécanique</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="cylindre_num.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">II. Application numérique : le bol</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resolution-de-problemes-d-elastostatique-linearises-l-approche-en-contrainte">1. Résolution de problèmes d’élastostatique linéarisés : l’approche en contrainte</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#traduisons-lequilibre">1.1 Traduisons l’équilibre :</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calcul-des-efforts">1.2 Calcul des efforts</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#resultante-des-forces">1.2.1 Résultante des forces</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#moment-au-point-o">1.2.2 Moment au point <span class="math notranslate nohighlight">\(O\)</span></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#force-surfacique-sur-gamma-0">1.2.3 Force surfacique sur <span class="math notranslate nohighlight">\(\Gamma_0\)</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#equations-du-probleme-d-elastostatique-avec-chargement-poids-propre-force-surfacique-sur-gamma-0">2. Équations du problème d’élastostatique avec chargement (poids propre + force surfacique sur <span class="math notranslate nohighlight">\(\Gamma_0\)</span>)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#equilibre-local">2.1 Équilibre local</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#loi-de-comportement">2.2 Loi de comportement</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conditions-aux-limites">2.3 Conditions aux limites</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#etude-de-la-regularite-et-des-espaces-admissibles">2.4 Étude de la régularité et des espaces admissibles</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#regularite-du-probleme">2.4.1 Régularité du problème</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-des-espaces-admissibles">2.4.2 Définition des espaces admissibles**</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recherche-de-la-solution-en-contrainte">3. Recherche de la solution en contrainte</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resolution-du-probleme-d-elastostatique-calcul-de-boldsymbol-sigma-33">3.1. Résolution du problème d’élastostatique : Calcul de <span class="math notranslate nohighlight">\(\boldsymbol{\sigma}_{33}\)</span></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#equation-de-divergence">3.1.1 Équation de divergence</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">3.1.2 Conditions aux limites</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#expression-finale-de-sigma-33">3.1.3 Expression finale de <span class="math notranslate nohighlight">\(\sigma_{33}\)</span>**</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#verifications">3.2 Vérifications</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#condition-sur-gamma-1-pour-x-3-h">3.2.1 Condition sur <span class="math notranslate nohighlight">\(\Gamma_1\)</span> (pour <span class="math notranslate nohighlight">\(x_3 = H\)</span>)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#condition-sur-gamma-0-pour-x-3-0">3.2.2 Condition sur <span class="math notranslate nohighlight">\(\Gamma_0\)</span> (pour <span class="math notranslate nohighlight">\(x_3 = 0\)</span>)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#condition-sur-gamma-l-surface-laterale">3.2.3 Condition sur <span class="math notranslate nohighlight">\(\Gamma_l\)</span> (surface latérale)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">3.3 Conclusion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#calcul-de-boldsymbol-varepsilon-et-verification-de-la-compatibilite">4. Calcul de <span class="math notranslate nohighlight">\(\boldsymbol{\varepsilon}\)</span> et vérification de la compatibilité</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#expression-de-boldsymbol-varepsilon">4.1 Expression de <span class="math notranslate nohighlight">\(\boldsymbol{\varepsilon}\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#expression-finale-de-boldsymbol-varepsilon-en-fonction-de-x-3">4.2 Expression finale de <span class="math notranslate nohighlight">\(\boldsymbol{\varepsilon}\)</span> en fonction de <span class="math notranslate nohighlight">\(x_3\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#verification-des-equations-de-compatibilite">4.3 Vérification des équations de compatibilité</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">4.4 Conclusion</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#integration-de-boldsymbol-varepsilon-pour-trouver-mathbf-u">5. Intégration de <span class="math notranslate nohighlight">\(\boldsymbol{\varepsilon}\)</span> pour trouver <span class="math notranslate nohighlight">\(\mathbf{u}\)</span></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#relations-entre-les-deformations-et-les-deplacements">5.1 Relations entre les déformations et les déplacements</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#integration-des-equations">5.1.1 Intégration des équations</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#expressions-finales-du-champ-de-deplacement">5.1.2 Expressions finales du champ de déplacement</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#exploitation-de-1-2-3-dans-4-5-6">5.1.3 Exploitation de (1’), (2’), (3’) dans (4), (5), (6)</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calcul-du-champ-de-deplacement">5.2 Calcul du champ de déplacement</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#unicite-de-la-solution-boldsymbol-sigma-mathbf-u">5.3 Unicité de la solution <span class="math notranslate nohighlight">\((\boldsymbol{\sigma}, \mathbf{u})\)</span></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#equations-derivees-de-4-5-6">5.3.1 Équations dérivées de (4’), (5’), (6’)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#exploitation-de-4-5-6">5.3.2 Exploitation de (4’’), (5’’), (6’’)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#injection-dans-4-5-6-de-7-8-et-9">5.3.3 Injection dans (4’), (5’), (6’) de (7), (8) et (9)</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#integration-finale-pour-mathbf-u">5.3.4 Intégration finale pour <span class="math notranslate nohighlight">\(\mathbf{u}\)</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#deplacement-du-point-m-0-sur-gamma-1">6. Déplacement du point <span class="math notranslate nohighlight">\(M_0\)</span> sur <span class="math notranslate nohighlight">\(\Gamma_1\)</span></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#calcul-du-deplacement-mathbf-u-sur-gamma-1">6.1 Calcul du déplacement <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> sur <span class="math notranslate nohighlight">\(\Gamma_1\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#position-apres-deformation">6.2 Position après déformation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#deformee-de-la-surface-gamma-1">6.3 Déformée de la surface <span class="math notranslate nohighlight">\(\Gamma_1\)</span></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">6.4 Conclusion</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#applications-numeriques">7. Applications numériques</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
