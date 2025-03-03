@@ -37,7 +37,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=7b2cf05a" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=a60a2f85" />
     <link rel="stylesheet" type="text/css" href="../_static/.ipynb_checkpoints/custom-checkpoint.css" />
   
   <!-- So that users can add custom icons -->
@@ -46,7 +46,7 @@
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../_static/documentation_options.js?v=a8e58a58"></script>
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -232,7 +232,7 @@
       
       
       
-      <li><a href="../_sources/" target="_blank"
+      <li><a href="../_sources/projet1/cylindre_theo.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -343,7 +343,7 @@
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resolution-du-probleme-d-elastostatique-calcul-de-boldsymbol-sigma-33">3.1. Résolution du problème d’élastostatique : Calcul de <span class="math notranslate nohighlight">\(\boldsymbol{\sigma}_{33}\)</span></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#equation-de-divergence">3.1.1 Équation de divergence</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">3.1.2 Conditions aux limites</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#expression-finale-de-sigma-33">3.1.3 Expression finale de <span class="math notranslate nohighlight">\(\sigma_{33}\)</span>**</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#expression-finale-de-sigma-33">3.1.3 Expression finale de <span class="math notranslate nohighlight">\(\sigma_{33}\)</span></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#verifications">3.2 Vérifications</a><ul class="nav section-nav flex-column">
@@ -438,10 +438,11 @@
 <li><p><span class="math notranslate nohighlight">\(\mathbf{R}^*\)</span> : résultante de la force poids</p></li>
 <li><p><span class="math notranslate nohighlight">\(\mathbf{M}_O^*\)</span> : moment résultant de la force poids en <span class="math notranslate nohighlight">\(O\)</span></p></li>
 </ul>
-<p>À l’équilibre, la résultante de la force poids <span class="math notranslate nohighlight">\(\mathbf{R}^*\)</span> est égale aux <strong>actions extérieures mécaniques surfaciques appliquées</strong> sur la base <span class="math notranslate nohighlight">\(\Gamma_0\)</span>. Ces actions s’expriment à travers le vecteur contrainte de Cauchy :
-$<span class="math notranslate nohighlight">\(
+<p>À l’équilibre, la résultante de la force poids <span class="math notranslate nohighlight">\(\mathbf{R}^*\)</span> est égale aux <strong>actions extérieures mécaniques surfaciques appliquées</strong> sur la base <span class="math notranslate nohighlight">\(\Gamma_0\)</span>. Ces actions s’expriment à travers le vecteur contrainte de Cauchy :</p>
+<div class="math notranslate nohighlight">
+\[
 \mathbf{T}|_{\Gamma_0} = \boldsymbol{\sigma}|_{\Gamma_0} \cdot \mathbf{n}, \quad \text{avec } \mathbf{n} = -\mathbf{e}_3.
-\)</span>$</p>
+\]</div>
 </section>
 <section id="calcul-des-efforts">
 <h3>1.2 Calcul des efforts<a class="headerlink" href="#calcul-des-efforts" title="Link to this heading">#</a></h3>
@@ -509,12 +510,13 @@ P = \rho g H
 <blockquote>
 <div><ol class="arabic simple" start="2">
 <li><p><strong>Pour construire une solution analytique du problème, nous considérons à partir de maintenant le problème d’équilibre obtenu en &gt;remplaçant la condition d’encastrement sur <span class="math notranslate nohighlight">\(\Gamma_0\)</span> par une condition aux limites en efforts.</strong><br />
-La base <span class="math notranslate nohighlight">\(\Gamma_0\)</span> est désormais supposée soumise à une densité surfacique d’efforts uniforme :<br />
-$<span class="math notranslate nohighlight">\(
- \mathbf{F}_s = P \boldsymbol{e}_3,
- \)</span>$<br />
-déterminée dans la question précédente.</p></li>
+La base <span class="math notranslate nohighlight">\(\Gamma_0\)</span> est désormais supposée soumise à une densité surfacique d’efforts uniforme :</p></li>
 </ol>
+<div class="math notranslate nohighlight">
+\[
+    \mathbf{F}_s = P \boldsymbol{e}_3,
+    \]</div>
+<p>déterminée dans la question précédente.</p>
 <ul class="simple">
 <li><p>Écrire les équations du problème et les nouvelles conditions aux limites associées.</p></li>
 <li><p>Vérifier si ce problème est régulier. Si oui, préciser de quel type.</p></li>
@@ -548,10 +550,11 @@ déterminée dans la question précédente.</p></li>
 \]</div>
 <p>où :</p>
 <ul>
-<li><p><span class="math notranslate nohighlight">\(\lambda\)</span> et <span class="math notranslate nohighlight">\(\mu\)</span> sont les coefficients de Lamé, définis par :
-$<span class="math notranslate nohighlight">\(
-\mu = \frac{E}{2(1+\nu)}, \quad \lambda = \frac{E\nu}{(1+\nu)(1-2\nu)},
-\)</span>$</p>
+<li><p><span class="math notranslate nohighlight">\(\lambda\)</span> et <span class="math notranslate nohighlight">\(\mu\)</span> sont les coefficients de Lamé, définis par :</p>
+<div class="math notranslate nohighlight">
+\[
+  \mu = \frac{E}{2(1+\nu)}, \quad \lambda = \frac{E\nu}{(1+\nu)(1-2\nu)},
+  \]</div>
 <p>avec <span class="math notranslate nohighlight">\(E\)</span> le module de Young et <span class="math notranslate nohighlight">\(\nu\)</span> le coefficient de Poisson.</p>
 </li>
 </ul>
@@ -582,16 +585,18 @@ $<span class="math notranslate nohighlight">\(
   \]</div>
 </li>
 <li><p><strong>Sur la base supérieure <span class="math notranslate nohighlight">\(\Gamma_1\)</span> (pour <span class="math notranslate nohighlight">\(x_3 = H\)</span>)</strong></p>
-<p>La base supérieure est libre d’efforts :
-$<span class="math notranslate nohighlight">\(
-\boldsymbol{\sigma}|_{\Gamma_1} \cdot \mathbf{n} = \mathbf{0}, \quad \text{avec } \mathbf{n} = \mathbf{e}_3.
-\)</span>$</p>
+<p>La base supérieure est libre d’efforts :</p>
+<div class="math notranslate nohighlight">
+\[
+  \boldsymbol{\sigma}|_{\Gamma_1} \cdot \mathbf{n} = \mathbf{0}, \quad \text{avec } \mathbf{n} = \mathbf{e}_3.
+  \]</div>
 </li>
 <li><p><strong>Sur la surface latérale <span class="math notranslate nohighlight">\(\Gamma_l\)</span> (pour <span class="math notranslate nohighlight">\(r = R\)</span>)</strong></p>
-<p>La surface latérale est libre d’efforts :
-$<span class="math notranslate nohighlight">\(
-\boldsymbol{\sigma}|_{\Gamma_l} \cdot \mathbf{n} = \mathbf{0}, \quad \text{avec } \mathbf{n} = \mathbf{e}_r.
-\)</span>$</p>
+<p>La surface latérale est libre d’efforts :</p>
+<div class="math notranslate nohighlight">
+\[
+  \boldsymbol{\sigma}|_{\Gamma_l} \cdot \mathbf{n} = \mathbf{0}, \quad \text{avec } \mathbf{n} = \mathbf{e}_r.
+  \]</div>
 </li>
 </ul>
 </section>
@@ -628,9 +633,10 @@ U_{ad} = \{ \mathbf{v} \mid \mathbf{v} \text{ régulier} \}.
 \end{split}\]</div>
 <blockquote>
 <div><ol class="arabic simple" start="3">
-<li><p><strong>On se propose de rechercher la solution en contrainte de ce nouveau problème sous la forme :</strong>
-$<span class="math notranslate nohighlight">\(\boldsymbol{\sigma}(x_1, x_2, x_3) = \sigma_{33}(x_1, x_2, x_3) \boldsymbol{e}_3 \otimes \boldsymbol{e_3}.\)</span>$</p></li>
+<li><p><strong>On se propose de rechercher la solution en contrainte de ce nouveau problème sous la forme :</strong></p></li>
 </ol>
+<div class="math notranslate nohighlight">
+\[\boldsymbol{\sigma}(x_1, x_2, x_3) = \sigma_{33}(x_1, x_2, x_3) \boldsymbol{e}_3 \otimes \boldsymbol{e_3}.\]</div>
 <ul class="simple">
 <li><p>À quelle(s) condition(s) un tel champ est-il statiquement admissible pour ce problème ?</p></li>
 </ul>
@@ -717,7 +723,7 @@ Le champ <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> est ob
 \]</div>
 </section>
 <section id="expression-finale-de-sigma-33">
-<h3>3.1.3 Expression finale de <span class="math notranslate nohighlight">\(\sigma_{33}\)</span>**<a class="headerlink" href="#expression-finale-de-sigma-33" title="Link to this heading">#</a></h3>
+<h3>3.1.3 Expression finale de <span class="math notranslate nohighlight">\(\sigma_{33}\)</span><a class="headerlink" href="#expression-finale-de-sigma-33" title="Link to this heading">#</a></h3>
 <p>En regroupant les résultats, <span class="math notranslate nohighlight">\(\sigma_{33}\)</span> s’écrit finalement :</p>
 <div class="math notranslate nohighlight">
 \[
@@ -903,31 +909,40 @@ Puisque <span class="math notranslate nohighlight">\(\boldsymbol{\varepsilon}\)<
 <hr class="docutils" />
 <section id="integration-des-equations">
 <h4>5.1.1 Intégration des équations<a class="headerlink" href="#integration-des-equations" title="Link to this heading">#</a></h4>
-<ol class="arabic simple">
-<li><p>Pour <span class="math notranslate nohighlight">\(\varepsilon_{11}\)</span> :
-$<span class="math notranslate nohighlight">\(
-\varepsilon_{11} = \frac{\partial u_1}{\partial x_1} = -\frac{\nu}{E} \rho g (x_3 - H).
-\)</span><span class="math notranslate nohighlight">\(
-Par intégration par rapport à \)</span>x_1<span class="math notranslate nohighlight">\(, on obtient :
-\)</span><span class="math notranslate nohighlight">\(
-u_1 = -\frac{\nu}{E} \rho g (x_3 - H) x_1 + f_1(x_2, x_3).
-\)</span>$</p></li>
-<li><p>Pour <span class="math notranslate nohighlight">\(\varepsilon_{22}\)</span> :
-$<span class="math notranslate nohighlight">\(
-\varepsilon_{22} = \frac{\partial u_2}{\partial x_2} = -\frac{\nu}{E} \rho g (x_3 - H).
-\)</span><span class="math notranslate nohighlight">\(
-Par intégration par rapport à \)</span>x_2<span class="math notranslate nohighlight">\(, on obtient :
-\)</span><span class="math notranslate nohighlight">\(
-u_2 = -\frac{\nu}{E} \rho g (x_3 - H) x_2 + f_2(x_1, x_3).
-\)</span>$</p></li>
-<li><p>Pour <span class="math notranslate nohighlight">\(\varepsilon_{33}\)</span> :
-$<span class="math notranslate nohighlight">\(
-\varepsilon_{33} = \frac{\partial u_3}{\partial x_3} = \frac{1}{E} \rho g (x_3 - H).
-\)</span><span class="math notranslate nohighlight">\(
-Par intégration par rapport à \)</span>x_3<span class="math notranslate nohighlight">\(, on obtient :
-\)</span><span class="math notranslate nohighlight">\(
-u_3 = \frac{1}{E} \rho g \frac{(x_3 - H)^2}{2} + f_3(x_1, x_2).
-\)</span>$</p></li>
+<ol class="arabic">
+<li><p>Pour <span class="math notranslate nohighlight">\(\varepsilon_{11}\)</span> :</p>
+<div class="math notranslate nohighlight">
+\[
+   \varepsilon_{11} = \frac{\partial u_1}{\partial x_1} = -\frac{\nu}{E} \rho g (x_3 - H).
+   \]</div>
+<p>Par intégration par rapport à <span class="math notranslate nohighlight">\(x_1\)</span>, on obtient :</p>
+<div class="math notranslate nohighlight">
+\[
+   u_1 = -\frac{\nu}{E} \rho g (x_3 - H) x_1 + f_1(x_2, x_3).
+   \]</div>
+</li>
+<li><p>Pour <span class="math notranslate nohighlight">\(\varepsilon_{22}\)</span> :</p>
+<div class="math notranslate nohighlight">
+\[
+   \varepsilon_{22} = \frac{\partial u_2}{\partial x_2} = -\frac{\nu}{E} \rho g (x_3 - H).
+   \]</div>
+<p>Par intégration par rapport à <span class="math notranslate nohighlight">\(x_2\)</span>, on obtient :</p>
+<div class="math notranslate nohighlight">
+\[
+   u_2 = -\frac{\nu}{E} \rho g (x_3 - H) x_2 + f_2(x_1, x_3).
+   \]</div>
+</li>
+<li><p>Pour <span class="math notranslate nohighlight">\(\varepsilon_{33}\)</span> :</p>
+<div class="math notranslate nohighlight">
+\[
+   \varepsilon_{33} = \frac{\partial u_3}{\partial x_3} = \frac{1}{E} \rho g (x_3 - H).
+   \]</div>
+<p>Par intégration par rapport à <span class="math notranslate nohighlight">\(x_3\)</span>, on obtient :</p>
+<div class="math notranslate nohighlight">
+\[
+   u_3 = \frac{1}{E} \rho g \frac{(x_3 - H)^2}{2} + f_3(x_1, x_2).
+   \]</div>
+</li>
 </ol>
 </section>
 <hr class="docutils" />
@@ -950,19 +965,25 @@ u_3 = \frac{1}{E} \rho g \frac{(x_3 - H)^2}{2} + f_3(x_1, x_2).
 <hr class="docutils" />
 <section id="exploitation-de-1-2-3-dans-4-5-6">
 <h4>5.1.3 Exploitation de (1’), (2’), (3’) dans (4), (5), (6)<a class="headerlink" href="#exploitation-de-1-2-3-dans-4-5-6" title="Link to this heading">#</a></h4>
-<ol class="arabic simple">
-<li><p><strong>(4’)</strong> :
-$<span class="math notranslate nohighlight">\(
-f_1(x_2, x_3)_{,2} + f_2(x_1, x_3)_{,1} = 0.
-\)</span>$</p></li>
-<li><p><strong>(5’)</strong> :
-$<span class="math notranslate nohighlight">\(
-f_1(x_2, x_3)_{,3} -\frac{\nu \rho g}{E}x_1 + f_3(x_1, x_2)_{,1} = 0.
-\)</span>$</p></li>
-<li><p><strong>(6’)</strong> :
-$<span class="math notranslate nohighlight">\(
-f_2(x_1, x_3)_{,3}-\frac{\nu \rho g}{E}x_2 + f_3(x_1, x_2)_{,2} = 0.
-\)</span>$</p></li>
+<ol class="arabic">
+<li><p><strong>(4’)</strong> :</p>
+<div class="math notranslate nohighlight">
+\[
+   f_1(x_2, x_3)_{,2} + f_2(x_1, x_3)_{,1} = 0.
+   \]</div>
+</li>
+<li><p><strong>(5’)</strong> :</p>
+<div class="math notranslate nohighlight">
+\[
+   f_1(x_2, x_3)_{,3} -\frac{\nu \rho g}{E}x_1 + f_3(x_1, x_2)_{,1} = 0.
+   \]</div>
+</li>
+<li><p><strong>(6’)</strong> :</p>
+<div class="math notranslate nohighlight">
+\[
+   f_2(x_1, x_3)_{,3}-\frac{\nu \rho g}{E}x_2 + f_3(x_1, x_2)_{,2} = 0.
+   \]</div>
+</li>
 </ol>
 </section>
 </section>
@@ -994,26 +1015,30 @@ u_3 = \frac{\rho g}{E} \left( \frac{x_3^2}{2} - H x_3 \right) + \frac{\nu \rho g
 <hr class="docutils" />
 <section id="unicite-de-la-solution-boldsymbol-sigma-mathbf-u">
 <h3>5.3 Unicité de la solution <span class="math notranslate nohighlight">\((\boldsymbol{\sigma}, \mathbf{u})\)</span><a class="headerlink" href="#unicite-de-la-solution-boldsymbol-sigma-mathbf-u" title="Link to this heading">#</a></h3>
-<ol class="arabic simple">
+<ol class="arabic">
 <li><p><strong>Dans le problème initial (encastrement sur <span class="math notranslate nohighlight">\(\Gamma_0\)</span>) :</strong></p>
-<ul class="simple">
-<li><p>La condition d’encastrement sur <span class="math notranslate nohighlight">\(\Gamma_0\)</span> imposait que les déplacements soient nuls :
-$<span class="math notranslate nohighlight">\(
-\mathbf{u} = 0 \quad \text{sur } \Gamma_0,
-\)</span>$
-éliminant toute contribution de rotation ou translation de corps rigide.</p></li>
+<ul>
+<li><p>La condition d’encastrement sur <span class="math notranslate nohighlight">\(\Gamma_0\)</span> imposait que les déplacements soient nuls :</p>
+<div class="math notranslate nohighlight">
+\[
+     \mathbf{u} = 0 \quad \text{sur } \Gamma_0,
+     \]</div>
+<p>éliminant toute contribution de rotation ou translation de corps rigide.</p>
+</li>
 <li><p>Ainsi, pour le problème initial, la solution <span class="math notranslate nohighlight">\((\boldsymbol{\sigma}, \mathbf{u})\)</span> est <strong>unique</strong>.</p></li>
 </ul>
 </li>
 <li><p><strong>Dans le problème modifié (chargement en efforts sur <span class="math notranslate nohighlight">\(\Gamma_0\)</span>) :</strong></p>
-<ul class="simple">
+<ul>
 <li><p>En remplaçant la condition d’encastrement par un chargement en efforts uniformes, cette modification <strong>assouplit les contraintes sur les déplacements</strong>, ouvrant la porte à des solutions <strong>non uniques</strong> pour <span class="math notranslate nohighlight">\(\mathbf{u}\)</span>.</p></li>
 <li><p>Nous introduisons des <strong>degrés de liberté supplémentaires</strong> associés à la rotation et à la translation. Ces mouvements rigides ne sont pas contraints par les équations d’équilibre ni les conditions aux limites en efforts, rendant la solution <span class="math notranslate nohighlight">\((\boldsymbol{\sigma}, \mathbf{u})\)</span> <strong>non unique</strong>.</p></li>
-<li><p>Cela se manifeste par la présence des constantes :
-$<span class="math notranslate nohighlight">\(
-a, \, b, \, f, \, d, \, h, \, n,
-\)</span>$
-qui restent indéterminées.</p></li>
+<li><p>Cela se manifeste par la présence des constantes :</p>
+<div class="math notranslate nohighlight">
+\[
+     a, \, b, \, f, \, d, \, h, \, n,
+     \]</div>
+<p>qui restent indéterminées.</p>
+</li>
 </ul>
 </li>
 </ol>
@@ -1033,82 +1058,92 @@ qui restent indéterminées.</p></li>
 </ol>
 <section id="equations-derivees-de-4-5-6">
 <h4>5.3.1 Équations dérivées de (4’), (5’), (6’)<a class="headerlink" href="#equations-derivees-de-4-5-6" title="Link to this heading">#</a></h4>
-<p><strong>(4’’)</strong> :
-$<span class="math notranslate nohighlight">\(
+<p><strong>(4’’)</strong> :</p>
+<div class="math notranslate nohighlight">
+\[
 f_1(x_2, x_3)_{,22} = 0 \quad \text{et} \quad f_2(x_1, x_3)_{,11} = 0.
-\)</span>$</p>
-<p><strong>(5’’)</strong> :
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p><strong>(5’’)</strong> :</p>
+<div class="math notranslate nohighlight">
+\[
 f_1(x_2, x_3)_{,33} = 0 \quad \text{et} \quad -\frac{\nu \rho g}{E} + f_3(x_1, x_2)_{,11} = 0.
-\)</span>$</p>
-<p><strong>(6’’)</strong> :
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p><strong>(6’’)</strong> :</p>
+<div class="math notranslate nohighlight">
+\[
 -\frac{\nu \rho g}{E} + f_3(x_1, x_2)_{,22} = 0 \quad \text{et} \quad f_2(x_1, x_3)_{,33} = 0.
-\)</span>$</p>
+\]</div>
 </section>
 <hr class="docutils" />
 <section id="exploitation-de-4-5-6">
 <h4>5.3.2 Exploitation de (4’’), (5’’), (6’’)<a class="headerlink" href="#exploitation-de-4-5-6" title="Link to this heading">#</a></h4>
 <p>En intégrant les équations (4’’) et (5’’), on obtient :</p>
-<ol class="arabic simple">
-<li><p>Pour <span class="math notranslate nohighlight">\(f_1(x_2, x_3)\)</span> :
-$<span class="math notranslate nohighlight">\(
-f_1(x_2, x_3) = ax_2 + bx_3 + c x_2 x_3 + d. \tag{7}
-\)</span>$</p></li>
-<li><p>Pour <span class="math notranslate nohighlight">\(f_2(x_1, x_3)\)</span> :
-$<span class="math notranslate nohighlight">\(
-f_2(x_1, x_3) = ex_1 + fx_3 + g x_1 x_3 + h. \tag{8}
-\)</span>$</p></li>
-<li><p>Pour <span class="math notranslate nohighlight">\(f_3(x_1, x_2)\)</span> :
-$<span class="math notranslate nohighlight">\(
-f_3(x_1, x_2) = \frac{\nu \rho g}{E} \frac{x_1^2 + x_2^2}{2} + i x_1 + l x_2 + m x_1 x_2 + n. \tag{9}
-\)</span>$</p></li>
+<ol class="arabic">
+<li><p>Pour <span class="math notranslate nohighlight">\(f_1(x_2, x_3)\)</span> :</p>
+<div class="math notranslate nohighlight">
+\[
+   f_1(x_2, x_3) = ax_2 + bx_3 + c x_2 x_3 + d. \tag{7}
+   \]</div>
+</li>
+<li><p>Pour <span class="math notranslate nohighlight">\(f_2(x_1, x_3)\)</span> :</p>
+<div class="math notranslate nohighlight">
+\[
+   f_2(x_1, x_3) = ex_1 + fx_3 + g x_1 x_3 + h. \tag{8}
+   \]</div>
+</li>
+<li><p>Pour <span class="math notranslate nohighlight">\(f_3(x_1, x_2)\)</span> :</p>
+<div class="math notranslate nohighlight">
+\[
+   f_3(x_1, x_2) = \frac{\nu \rho g}{E} \frac{x_1^2 + x_2^2}{2} + i x_1 + l x_2 + m x_1 x_2 + n. \tag{9}
+   \]</div>
+</li>
 </ol>
 </section>
 <hr class="docutils" />
 <section id="injection-dans-4-5-6-de-7-8-et-9">
 <h4>5.3.3 Injection dans (4’), (5’), (6’) de (7), (8) et (9)<a class="headerlink" href="#injection-dans-4-5-6-de-7-8-et-9" title="Link to this heading">#</a></h4>
-<p><strong>Dans (4’)</strong>:
-$<span class="math notranslate nohighlight">\(
+<p><strong>Dans (4’)</strong>:</p>
+<div class="math notranslate nohighlight">
+\[
 a + c x_3 + e + g x_3 = 0,
-\)</span><span class="math notranslate nohighlight">\(
-ce qui donne :
-\)</span><span class="math notranslate nohighlight">\(
+\]</div>
+<p>ce qui donne :</p>
+<div class="math notranslate nohighlight">
+\[
 a + l = 0 \quad \text{et} \quad c + g = 0.
-\)</span><span class="math notranslate nohighlight">\(
-soit :
-\)</span><span class="math notranslate nohighlight">\(
+\]</div>
+<p>soit :</p>
+<div class="math notranslate nohighlight">
+\[
 l = -a \quad \text{et} \quad g = -c.
-\)</span>$</p>
-<p><strong>Dans (5’)</strong> :
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p><strong>Dans (5’)</strong> :</p>
+<div class="math notranslate nohighlight">
+\[
 b + i = 0. \quad \text{et} \quad c+m = 0.
-\)</span><span class="math notranslate nohighlight">\(
-Ainsi :
-\)</span><span class="math notranslate nohighlight">\(
+\]</div>
+<p>Ainsi :</p>
+<div class="math notranslate nohighlight">
+\[
 i = -b \quad \text{et} \quad m = -c.
-\)</span>$</p>
-<p><strong>Dans (6’)</strong> :
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p><strong>Dans (6’)</strong> :</p>
+<div class="math notranslate nohighlight">
+\[
 f + l = 0 \quad \text{et} \quad g + m = 0.
-\)</span><span class="math notranslate nohighlight">\(
-Ainsi :
-\)</span><span class="math notranslate nohighlight">\(
+\]</div>
+<p>Ainsi :</p>
+<div class="math notranslate nohighlight">
+\[
 m = -g \quad \text{et} \quad f = -l.
-\)</span>$</p>
+\]</div>
 </section>
 <hr class="docutils" />
 <section id="integration-finale-pour-mathbf-u">
 <h4>5.3.4 Intégration finale pour <span class="math notranslate nohighlight">\(\mathbf{u}\)</span><a class="headerlink" href="#integration-finale-pour-mathbf-u" title="Link to this heading">#</a></h4>
-<p><span class="math notranslate nohighlight">\(
-u_1 = \color{rgb(127,0,127)}{-\frac{\nu \rho g}{E} (x_3 - H) x_1} + \color{rgb(0,127,0)}{a x_2} + \color{rgb(127,127,0)}{b x_3 + d}.
-\)</span></p>
-<p><span class="math notranslate nohighlight">\(
-u_2 = \color{rgb(127,0,127)}{-\frac{\nu \rho g}{E}(x_3-H)x_2}+\color{rgb(0,127,0)}{-ax_1}+\color{rgb(127,127,0)}{fx_3+h}
-\)</span></p>
-<p><span class="math notranslate nohighlight">\(
-u_3 = \color{rgb(127,0,127)}{\frac{\rho g}{E}\left(\frac{x_3^2}{2}-Hx_3\right)+\frac{\nu \rho g}{E}\frac{x_1^2+x_2^2}{2}}+\color{rgb(0,127,0)}{-bx_1-fx_2}+\color{rgb(127,127,0)}{n}.
-\)</span></p>
+<p><span class="math notranslate nohighlight">\(u_1 = \color{rgb(127,0,127)}{-\frac{\nu \rho g}{E} (x_3 - H) x_1} + \color{rgb(0,127,0)}{a x_2} + \color{rgb(127,127,0)}{b x_3 + d}.\)</span></p>
+<p><span class="math notranslate nohighlight">\(u_2 = \color{rgb(127,0,127)}{-\frac{\nu \rho g}{E}(x_3-H)x_2}+\color{rgb(0,127,0)}{-ax_1}+\color{rgb(127,127,0)}{fx_3+h}\)</span></p>
+<p><span class="math notranslate nohighlight">\(u_3 = \color{rgb(127,0,127)}{\frac{\rho g}{E}\left(\frac{x_3^2}{2}-Hx_3\right)+\frac{\nu \rho g}{E}\frac{x_1^2+x_2^2}{2}}+\color{rgb(0,127,0)}{-bx_1-fx_2}+\color{rgb(127,127,0)}{n}.\)</span></p>
 <p><strong>Explications des couleurs</strong>:</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(\textcolor{rgb(127,0,127)}{\text{Partie liée à la déformation mécanique (effet des contraintes internes)}}\)</span>.</p></li>
@@ -1126,48 +1161,54 @@ u_3 = \color{rgb(127,0,127)}{\frac{\rho g}{E}\left(\frac{x_3^2}{2}-Hx_3\right)+\
 </section>
 <section id="deplacement-du-point-m-0-sur-gamma-1">
 <h2>6. Déplacement du point <span class="math notranslate nohighlight">\(M_0\)</span> sur <span class="math notranslate nohighlight">\(\Gamma_1\)</span><a class="headerlink" href="#deplacement-du-point-m-0-sur-gamma-1" title="Link to this heading">#</a></h2>
-<p>Le point <span class="math notranslate nohighlight">\(M_0\)</span> appartient à la surface <span class="math notranslate nohighlight">\(\Gamma_1\)</span>, caractérisée par <span class="math notranslate nohighlight">\((r, \theta, x_3 = H)\)</span> en coordonnées cylindriques. Sa position initiale est donnée par :
-$<span class="math notranslate nohighlight">\(
+<p>Le point <span class="math notranslate nohighlight">\(M_0\)</span> appartient à la surface <span class="math notranslate nohighlight">\(\Gamma_1\)</span>, caractérisée par <span class="math notranslate nohighlight">\((r, \theta, x_3 = H)\)</span> en coordonnées cylindriques. Sa position initiale est donnée par :</p>
+<div class="math notranslate nohighlight">
+\[
 \mathbf{OM}_0 = r \mathbf{e}_r + H \mathbf{e}_3.
-\)</span>$</p>
-<p>Après déformation, sa position devient :
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p>Après déformation, sa position devient :</p>
+<div class="math notranslate nohighlight">
+\[
 \mathbf{OM} = \mathbf{OM}_0 + \mathbf{u}(M_0),
-\)</span><span class="math notranslate nohighlight">\(
-où \)</span>\mathbf{u}(M_0)<span class="math notranslate nohighlight">\( est le déplacement évalué sur \)</span>\Gamma_1<span class="math notranslate nohighlight">\( (\)</span>x_3 = H$).</p>
+\]</div>
+<p>où <span class="math notranslate nohighlight">\(\mathbf{u}(M_0)\)</span> est le déplacement évalué sur <span class="math notranslate nohighlight">\(\Gamma_1\)</span> (<span class="math notranslate nohighlight">\(x_3 = H\)</span>).</p>
 <hr class="docutils" />
 <section id="calcul-du-deplacement-mathbf-u-sur-gamma-1">
 <h3>6.1 Calcul du déplacement <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> sur <span class="math notranslate nohighlight">\(\Gamma_1\)</span><a class="headerlink" href="#calcul-du-deplacement-mathbf-u-sur-gamma-1" title="Link to this heading">#</a></h3>
 <p>En utilisant le champ de déplacement <span class="math notranslate nohighlight">\(\mathbf{u}\)</span> calculé précédemment :</p>
-<ol class="arabic simple">
+<ol class="arabic">
 <li><p><strong>Composante selon <span class="math notranslate nohighlight">\(\mathbf{e}_r\)</span> (<span class="math notranslate nohighlight">\(u_r\)</span>) :</strong>
-La composante radiale est obtenue en coordonnées cylindriques. À <span class="math notranslate nohighlight">\(x_3 = H\)</span>, seule la déformation mécanique contribue :
-$<span class="math notranslate nohighlight">\(
-u_r = 0.
-\)</span>$</p></li>
+La composante radiale est obtenue en coordonnées cylindriques. À <span class="math notranslate nohighlight">\(x_3 = H\)</span>, seule la déformation mécanique contribue :</p>
+<div class="math notranslate nohighlight">
+\[
+   u_r = 0.
+   \]</div>
+</li>
 <li><p><strong>Composante selon <span class="math notranslate nohighlight">\(\mathbf{e}_\theta\)</span> (<span class="math notranslate nohighlight">\(u_\theta\)</span>) :</strong>
-Par symétrie du problème, il n’y a pas de dépendance angulaire (<span class="math notranslate nohighlight">\(\theta\)</span>), donc :
-$<span class="math notranslate nohighlight">\(
-u_\theta = 0.
-\)</span>$</p></li>
+Par symétrie du problème, il n’y a pas de dépendance angulaire (<span class="math notranslate nohighlight">\(\theta\)</span>), donc :</p>
+<div class="math notranslate nohighlight">
+\[u_\theta = 0.\]</div>
+</li>
 <li><p><strong>Composante selon <span class="math notranslate nohighlight">\(\mathbf{e}_3\)</span> (<span class="math notranslate nohighlight">\(u_z\)</span>) :</strong>
-La composante verticale est obtenue en évaluant <span class="math notranslate nohighlight">\(u_3\)</span> sur <span class="math notranslate nohighlight">\(\Gamma_1\)</span> (<span class="math notranslate nohighlight">\(x_3 = H\)</span>) :
-$<span class="math notranslate nohighlight">\(
-u_z = \frac{\nu \rho g}{E} \frac{r^2}{2} - \frac{\rho g}{2E} H^2.
-\)</span>$</p></li>
+La composante verticale est obtenue en évaluant <span class="math notranslate nohighlight">\(u_3\)</span> sur <span class="math notranslate nohighlight">\(\Gamma_1\)</span> (<span class="math notranslate nohighlight">\(x_3 = H\)</span>) :</p>
+<div class="math notranslate nohighlight">
+\[u_z = \frac{\nu \rho g}{E} \frac{r^2}{2} - \frac{\rho g}{2E} H^2.\]</div>
+</li>
 </ol>
 </section>
 <hr class="docutils" />
 <section id="position-apres-deformation">
 <h3>6.2 Position après déformation<a class="headerlink" href="#position-apres-deformation" title="Link to this heading">#</a></h3>
-<p>En combinant, la position du point <span class="math notranslate nohighlight">\(M_0\)</span> après déformation devient :
-$<span class="math notranslate nohighlight">\(
+<p>En combinant, la position du point <span class="math notranslate nohighlight">\(M_0\)</span> après déformation devient :</p>
+<div class="math notranslate nohighlight">
+\[
 \mathbf{OM} = \left(r \mathbf{e}_r + H \mathbf{e}_3\right) + \left(\frac{\nu \rho g}{E} \frac{r^2}{2} - \frac{\rho g}{2E} H^2\right) \mathbf{e}_3.
-\)</span>$</p>
-<p>Ou, explicitement :
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p>Ou, explicitement :</p>
+<div class="math notranslate nohighlight">
+\[
 \mathbf{OM} = r \mathbf{e}_r + \left(H + \frac{\nu \rho g}{E} \frac{r^2}{2} - \frac{\rho g}{2E} H^2\right) \mathbf{e}_3.
-\)</span>$</p>
+\]</div>
 </section>
 <hr class="docutils" />
 <section id="deformee-de-la-surface-gamma-1">
@@ -1187,21 +1228,20 @@ $<span class="math notranslate nohighlight">\(
 <hr class="docutils" />
 <section id="id3">
 <h3>6.4 Conclusion<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
-<ol class="arabic simple">
+<ol class="arabic">
 <li><p><strong>Déplacement du centre <span class="math notranslate nohighlight">\(O'\)</span> de <span class="math notranslate nohighlight">\(\Gamma_1\)</span> :</strong>
-En posant <span class="math notranslate nohighlight">\(r = 0\)</span>, on retrouve :
-$<span class="math notranslate nohighlight">\(
-\mathbf{OM}' = H \mathbf{e}_3 - \frac{\rho g}{2E} H^2 \mathbf{e}_3.
-\)</span><span class="math notranslate nohighlight">\(
-Le point \)</span>O’<span class="math notranslate nohighlight">\( subit donc un déplacement vertical de :
-\)</span><span class="math notranslate nohighlight">\(
-u_z(O') = -\frac{\rho g}{2E} H^2.
-\)</span>$</p></li>
+En posant <span class="math notranslate nohighlight">\(r = 0\)</span>, on retrouve :</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{OM}' = H \mathbf{e}_3 - \frac{\rho g}{2E} H^2 \mathbf{e}_3.\]</div>
+<p>Le point <span class="math notranslate nohighlight">\(O'\)</span> subit donc un déplacement vertical de :</p>
+<div class="math notranslate nohighlight">
+\[u_z(O') = -\frac{\rho g}{2E} H^2.\]</div>
+</li>
 <li><p><strong>Déplacement général sur <span class="math notranslate nohighlight">\(\Gamma_1\)</span> :</strong>
-La déformée de la surface <span class="math notranslate nohighlight">\(\Gamma_1\)</span> est donnée par :
-$<span class="math notranslate nohighlight">\(
-u_z(r) = \frac{\nu \rho g}{E} \frac{r^2}{2} - \frac{\rho g}{2E} H^2.
-\)</span>$</p></li>
+La déformée de la surface <span class="math notranslate nohighlight">\(\Gamma_1\)</span> est donnée par :</p>
+<div class="math notranslate nohighlight">
+\[u_z(r) = \frac{\nu \rho g}{E} \frac{r^2}{2} - \frac{\rho g}{2E} H^2.\]</div>
+</li>
 </ol>
 <p>La déformation est caractérisée par une courbure parabolique dans la direction verticale (<span class="math notranslate nohighlight">\(\mathbf{e}_3\)</span>). Elle prend la forme d’un paraboloïde de révolution orienté selon l’axe <span class="math notranslate nohighlight">\(\mathbf{e}_3\)</span>. Le sommet de ce paraboloïde est légèrement abaissé en raison du poids propre, ce qui est exprimé par le terme <span class="math notranslate nohighlight">\(-\frac{\rho g H^2}{2E}\)</span>. La courbure de la surface dépend des paramètres mécaniques du matériau, notamment le coefficient de Poisson (<span class="math notranslate nohighlight">\(\nu\)</span>), la masse volumique (<span class="math notranslate nohighlight">\(\rho\)</span>) et le module de Young (<span class="math notranslate nohighlight">\(E\)</span>).</p>
 <hr class="docutils" />
@@ -1325,7 +1365,7 @@ u_z(r) = \frac{\nu \rho g}{E} \frac{r^2}{2} - \frac{\rho g}{2E} H^2.
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resolution-du-probleme-d-elastostatique-calcul-de-boldsymbol-sigma-33">3.1. Résolution du problème d’élastostatique : Calcul de <span class="math notranslate nohighlight">\(\boldsymbol{\sigma}_{33}\)</span></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#equation-de-divergence">3.1.1 Équation de divergence</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">3.1.2 Conditions aux limites</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#expression-finale-de-sigma-33">3.1.3 Expression finale de <span class="math notranslate nohighlight">\(\sigma_{33}\)</span>**</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#expression-finale-de-sigma-33">3.1.3 Expression finale de <span class="math notranslate nohighlight">\(\sigma_{33}\)</span></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#verifications">3.2 Vérifications</a><ul class="nav section-nav flex-column">
