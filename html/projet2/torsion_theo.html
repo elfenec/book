@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>III. Cylindre soumis à la torsion &#8212; My sample book</title>
+    <title>III. Cylindre soumis à la torsion &#8212; Fenec Book</title>
   
   
   
@@ -37,8 +37,8 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=a60a2f85" />
-    <link rel="stylesheet" type="text/css" href="../_static/.ipynb_checkpoints/custom-checkpoint.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom_backup.css?v=a60a2f85" />
+    <link rel="stylesheet" type="text/css" href="../_static/.ipynb_checkpoints/custom_backup-checkpoint.css" />
   
   <!-- So that users can add custom icons -->
   <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -150,8 +150,8 @@
       
     
     
-    <img src="../_static/fenec_light.png" class="logo__image only-light" alt="My sample book - Home"/>
-    <img src="../_static/fenec_dark.png" class="logo__image only-dark pst-js-only" alt="My sample book - Home"/>
+    <img src="../_static/fenec_light.png" class="logo__image only-light" alt="Fenec Book - Home"/>
+    <img src="../_static/fenec_dark.png" class="logo__image only-dark pst-js-only" alt="Fenec Book - Home"/>
   
   
 </a></div>
@@ -219,6 +219,84 @@
         <div class="header-article-item">
 
 <div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/elfenec/jupyterbook/main?urlpath=tree/projet2/torsion_theo.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/elfenec/jupyterbook" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/elfenec/jupyterbook/issues/new?title=Issue%20on%20page%20%2Fprojet2/torsion_theo.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
 
 
 
@@ -595,18 +673,33 @@ A x_2 &amp; -A x_1 &amp; 0
 </details>
 </div>
 <p><strong>Localisation de la contrainte critique <span class="math notranslate nohighlight">\( \sigma_c \)</span></strong></p>
-<p>La contrainte principale maximale en valeur absolue est <span class="math notranslate nohighlight">\( \sigma_3 = A r \)</span>. Cette contrainte atteint sa valeur maximale à la surface de l’arbre, où <span class="math notranslate nohighlight">\( r = R \)</span> (le rayon de l’arbre). Ainsi, la contrainte maximale est :</p>
-<p><span class="math notranslate nohighlight">\( \sigma_{\text{max}} = A R \)</span></p>
-<p>La rupture se produira lorsque <span class="math notranslate nohighlight">\( \sigma_{\text{max}} = \sigma_c \)</span>, soit :</p>
-<p><span class="math notranslate nohighlight">\( A R = \sigma_c \)</span></p>
+<p>La contrainte principale maximale en valeur absolue est <span class="math notranslate nohighlight">\( \sigma_3 = A R \)</span>. Cette contrainte atteint sa valeur maximale à la surface de l’arbre, où <span class="math notranslate nohighlight">\( r = R \)</span> (le rayon de l’arbre). Ainsi, la contrainte maximale est :</p>
+<div class="math notranslate nohighlight">
+\[
+\sigma_{\text{max}} = A R
+\]</div>
+<p>La rupture se produira lorsque <span class="math notranslate nohighlight">\( \sigma_{\text{max}} = \sigma_c \)</span>, soit :</p>
+<div class="math notranslate nohighlight">
+\[
+A R = \sigma_c
+\]</div>
 <p><strong>Valeur maximale du couple de torsion</strong></p>
-<p>Le moment de torsion <span class="math notranslate nohighlight">\( T \)</span> appliqué à l’arbre est lié au paramètre <span class="math notranslate nohighlight">\( A \)</span> par la relation :</p>
-<p><span class="math notranslate nohighlight">\( T = \frac{A \pi R^4}{2} \)</span></p>
-<p>Pour déterminer la valeur maximale du couple de torsion <span class="math notranslate nohighlight">\( T_{\text{max}} \)</span> que l’arbre peut supporter sans dépasser la contrainte critique <span class="math notranslate nohighlight">\( \sigma_c \)</span>, on utilise la relation trouvée précédemment :</p>
-<p><span class="math notranslate nohighlight">\( A = \frac{\sigma_c}{R} \)</span></p>
-<p>En substituant cette expression de <span class="math notranslate nohighlight">\( A \)</span> dans la formule du moment de torsion, on obtient :</p>
-<p><span class="math notranslate nohighlight">\( T_{\text{max}} = \frac{\sigma_c \pi R^3}{2} \)</span></p>
-<p>Ainsi, le couple de torsion maximal à ne pas dépasser est <span class="math notranslate nohighlight">\( T_{\text{max}} = \frac{\sigma_c \pi R^3}{2} \)</span>.</p>
+<p>Le moment de torsion <span class="math notranslate nohighlight">\( \mathbf{M}_O \)</span> appliqué à l’arbre est lié au paramètre <span class="math notranslate nohighlight">\( A \)</span> par la relation :</p>
+<div class="math notranslate nohighlight">
+\[
+\mathbf{M}_O = \frac{A \pi R^4}{2}\mathbf{e}_3
+\]</div>
+<p>Pour déterminer la valeur maximale du couple de torsion <span class="math notranslate nohighlight">\( \mathbf{M}_{O, \text{max}} \)</span> que l’arbre peut supporter sans dépasser la contrainte critique <span class="math notranslate nohighlight">\( \sigma_c \)</span>, on utilise la relation trouvée précédemment :</p>
+<div class="math notranslate nohighlight">
+\[
+A = \frac{\sigma_c}{R}
+\]</div>
+<p>En substituant cette expression de <span class="math notranslate nohighlight">\( A \)</span> dans la formule du moment de torsion, on obtient :</p>
+<div class="math notranslate nohighlight">
+\[
+\mathbf{M}_{O, \text{max}} = \frac{\sigma_c \pi R^3}{2}\mathbf{e}_3
+\]</div>
+<p>qui est le couple de torsion maximal à ne pas dépasser que l’on notera <span class="math notranslate nohighlight">\(T_{max}\)</span>.</p>
 <blockquote>
 <div><ol class="arabic simple" start="6">
 <li><p><strong>Déterminer la direction principale associée à la contrainte principale maximale.</strong></p></li>
@@ -720,6 +813,7 @@ J = \frac{\pi R^4}{2}
 <span class="kn">from</span><span class="w"> </span><span class="nn">bokeh.layouts</span><span class="w"> </span><span class="kn">import</span> <span class="n">column</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">bokeh.io</span><span class="w"> </span><span class="kn">import</span> <span class="n">output_notebook</span><span class="p">,</span> <span class="n">show</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">bokeh.plotting</span><span class="w"> </span><span class="kn">import</span> <span class="n">figure</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bokeh.models</span><span class="w"> </span><span class="kn">import</span> <span class="n">Legend</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">bokeh.models</span><span class="w"> </span><span class="kn">import</span> <span class="n">Slider</span><span class="p">,</span> <span class="n">CustomJS</span><span class="p">,</span> <span class="n">ColumnDataSource</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
@@ -758,14 +852,16 @@ J = \frac{\pi R^4}{2}
 <span class="n">p</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">major_label_text_color</span> <span class="o">=</span> <span class="s2">&quot;white&quot;</span>
 <span class="n">p</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">major_label_text_color</span> <span class="o">=</span> <span class="s2">&quot;white&quot;</span>
 
+
 <span class="c1"># Tracé de la courbe T(θ)</span>
-<span class="n">p</span><span class="o">.</span><span class="n">line</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="s2">&quot;y&quot;</span><span class="p">,</span> <span class="n">source</span><span class="o">=</span><span class="n">source_curve</span><span class="p">,</span> <span class="n">line_width</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;cyan&quot;</span><span class="p">,</span> <span class="n">legend_label</span><span class="o">=</span><span class="s2">&quot;T(θ)&quot;</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">line</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="s2">&quot;y&quot;</span><span class="p">,</span> <span class="n">source</span><span class="o">=</span><span class="n">source_curve</span><span class="p">,</span> <span class="n">line_width</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;cyan&quot;</span><span class="p">,</span> <span class="n">legend_label</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;T(θ)&quot;</span><span class="p">)</span>
 
 <span class="c1"># Ajout de l&#39;asymptote T_c</span>
-<span class="n">p</span><span class="o">.</span><span class="n">line</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="s2">&quot;y&quot;</span><span class="p">,</span> <span class="n">source</span><span class="o">=</span><span class="n">source_Tc</span><span class="p">,</span> <span class="n">line_width</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">line_dash</span><span class="o">=</span><span class="s2">&quot;dashed&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;magenta&quot;</span><span class="p">,</span> <span class="n">legend_label</span><span class="o">=</span><span class="s2">&quot;T_c&quot;</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">line</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="s2">&quot;y&quot;</span><span class="p">,</span> <span class="n">source</span><span class="o">=</span><span class="n">source_Tc</span><span class="p">,</span> <span class="n">line_width</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">line_dash</span><span class="o">=</span><span class="s2">&quot;dashed&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;magenta&quot;</span><span class="p">,</span> <span class="n">legend_label</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;T_c&quot;</span><span class="p">)</span>
 
 <span class="c1"># Ajout de la bille mobile</span>
-<span class="n">p</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="s2">&quot;y&quot;</span><span class="p">,</span> <span class="n">source</span><span class="o">=</span><span class="n">source_point</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;yellow&quot;</span><span class="p">,</span> <span class="n">legend_label</span><span class="o">=</span><span class="s2">&quot;T_max&quot;</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">,</span> <span class="s2">&quot;y&quot;</span><span class="p">,</span> <span class="n">source</span><span class="o">=</span><span class="n">source_point</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;yellow&quot;</span><span class="p">,</span> <span class="n">legend_label</span><span class="o">=</span><span class="sa">r</span><span class="s2">&quot;T_max&quot;</span><span class="p">)</span>
+
 
 <span class="c1"># ✅ Déplacer la légende en haut à gauche</span>
 <span class="n">p</span><span class="o">.</span><span class="n">legend</span><span class="o">.</span><span class="n">location</span> <span class="o">=</span> <span class="s2">&quot;top_left&quot;</span>
@@ -1144,11 +1240,11 @@ function(Bokeh) {
     });
   }
 }(window));</script><div class="output text_html">
-  <div id="fd2364ff-a733-428b-8d72-3ca1d2fbdb4c" data-root-id="p1082" style="display: contents;"></div>
+  <div id="bf24f1f7-a339-4f92-a909-508098b6cfaa" data-root-id="p1082" style="display: contents;"></div>
 </div><script type="application/javascript">(function(root) {
   function embed_document(root) {
-  const docs_json = {"cc852496-32db-485b-83f5-1e55deca9fc6":{"version":"3.6.2","title":"Bokeh Application","roots":[{"type":"object","name":"Column","id":"p1082","attributes":{"children":[{"type":"object","name":"Figure","id":"p1010","attributes":{"width":775,"height":500,"x_range":{"type":"object","name":"DataRange1d","id":"p1011"},"y_range":{"type":"object","name":"DataRange1d","id":"p1012"},"x_scale":{"type":"object","name":"LinearScale","id":"p1020"},"y_scale":{"type":"object","name":"LinearScale","id":"p1021"},"title":{"type":"object","name":"Title","id":"p1013","attributes":{"text":"\u00c9volution du couple T en fonction de \u03b8","text_color":"white"}},"renderers":[{"type":"object","name":"GlyphRenderer","id":"p1051","attributes":{"data_source":{"type":"object","name":"ColumnDataSource","id":"p1001","attributes":{"selected":{"type":"object","name":"Selection","id":"p1002","attributes":{"indices":[],"line_indices":[]}},"selection_policy":{"type":"object","name":"UnionRenderers","id":"p1003"},"data":{"type":"map","entries":[["x",{"type":"ndarray","array":{"type":"bytes","data":"AAAAAAAAAAAcx3Ecx3G8PxzHcRzHccw/VVVVVVVV1T8cx3Ecx3HcP3Icx3Ecx+E/VVVVVVVV5T84juM4juPoPxzHcRzHcew/AAAAAAAA8D8="},"shape":[10],"dtype":"float64","order":"little"}],["y",{"type":"ndarray","array":{"type":"bytes","data":"AAAAAAAAAABsG5R8b78NQWwblHxvvx1BkRRvnZNPJkFsG5R8b78tQSSR3K2llzJBkRRvnZNPNkH+lwGNgQc6QWwblHxvvz1BbE8Ttq67QEE="},"shape":[10],"dtype":"float64","order":"little"}]]}}},"view":{"type":"object","name":"CDSView","id":"p1052","attributes":{"filter":{"type":"object","name":"AllIndices","id":"p1053"}}},"glyph":{"type":"object","name":"Line","id":"p1048","attributes":{"x":{"type":"field","field":"x"},"y":{"type":"field","field":"y"},"line_color":"cyan","line_width":2}},"nonselection_glyph":{"type":"object","name":"Line","id":"p1049","attributes":{"x":{"type":"field","field":"x"},"y":{"type":"field","field":"y"},"line_color":"cyan","line_alpha":0.1,"line_width":2}},"muted_glyph":{"type":"object","name":"Line","id":"p1050","attributes":{"x":{"type":"field","field":"x"},"y":{"type":"field","field":"y"},"line_color":"cyan","line_alpha":0.2,"line_width":2}}}},{"type":"object","name":"GlyphRenderer","id":"p1062","attributes":{"data_source":{"type":"object","name":"ColumnDataSource","id":"p1007","attributes":{"selected":{"type":"object","name":"Selection","id":"p1008","attributes":{"indices":[],"line_indices":[]}},"selection_policy":{"type":"object","name":"UnionRenderers","id":"p1009"},"data":{"type":"map","entries":[["x",[0,1]],["y",[1256637.0614359174,1256637.0614359174]]]}}},"view":{"type":"object","name":"CDSView","id":"p1063","attributes":{"filter":{"type":"object","name":"AllIndices","id":"p1064"}}},"glyph":{"type":"object","name":"Line","id":"p1059","attributes":{"x":{"type":"field","field":"x"},"y":{"type":"field","field":"y"},"line_color":"magenta","line_width":2,"line_dash":[6]}},"nonselection_glyph":{"type":"object","name":"Line","id":"p1060","attributes":{"x":{"type":"field","field":"x"},"y":{"type":"field","field":"y"},"line_color":"magenta","line_alpha":0.1,"line_width":2,"line_dash":[6]}},"muted_glyph":{"type":"object","name":"Line","id":"p1061","attributes":{"x":{"type":"field","field":"x"},"y":{"type":"field","field":"y"},"line_color":"magenta","line_alpha":0.2,"line_width":2,"line_dash":[6]}}}},{"type":"object","name":"GlyphRenderer","id":"p1072","attributes":{"data_source":{"type":"object","name":"ColumnDataSource","id":"p1004","attributes":{"selected":{"type":"object","name":"Selection","id":"p1005","attributes":{"indices":[],"line_indices":[]}},"selection_policy":{"type":"object","name":"UnionRenderers","id":"p1006"},"data":{"type":"map","entries":[["x",[0]],["y",[0]]]}}},"view":{"type":"object","name":"CDSView","id":"p1073","attributes":{"filter":{"type":"object","name":"AllIndices","id":"p1074"}}},"glyph":{"type":"object","name":"Scatter","id":"p1069","attributes":{"x":{"type":"field","field":"x"},"y":{"type":"field","field":"y"},"size":{"type":"value","value":10},"line_color":{"type":"value","value":"yellow"},"fill_color":{"type":"value","value":"yellow"},"hatch_color":{"type":"value","value":"yellow"}}},"nonselection_glyph":{"type":"object","name":"Scatter","id":"p1070","attributes":{"x":{"type":"field","field":"x"},"y":{"type":"field","field":"y"},"size":{"type":"value","value":10},"line_color":{"type":"value","value":"yellow"},"line_alpha":{"type":"value","value":0.1},"fill_color":{"type":"value","value":"yellow"},"fill_alpha":{"type":"value","value":0.1},"hatch_color":{"type":"value","value":"yellow"},"hatch_alpha":{"type":"value","value":0.1}}},"muted_glyph":{"type":"object","name":"Scatter","id":"p1071","attributes":{"x":{"type":"field","field":"x"},"y":{"type":"field","field":"y"},"size":{"type":"value","value":10},"line_color":{"type":"value","value":"yellow"},"line_alpha":{"type":"value","value":0.2},"fill_color":{"type":"value","value":"yellow"},"fill_alpha":{"type":"value","value":0.2},"hatch_color":{"type":"value","value":"yellow"},"hatch_alpha":{"type":"value","value":0.2}}}}}],"toolbar":{"type":"object","name":"Toolbar","id":"p1019","attributes":{"tools":[{"type":"object","name":"PanTool","id":"p1032"},{"type":"object","name":"WheelZoomTool","id":"p1033","attributes":{"renderers":"auto"}},{"type":"object","name":"BoxZoomTool","id":"p1034","attributes":{"overlay":{"type":"object","name":"BoxAnnotation","id":"p1035","attributes":{"syncable":false,"line_color":"black","line_alpha":1.0,"line_width":2,"line_dash":[4,4],"fill_color":"lightgrey","fill_alpha":0.5,"level":"overlay","visible":false,"left":{"type":"number","value":"nan"},"right":{"type":"number","value":"nan"},"top":{"type":"number","value":"nan"},"bottom":{"type":"number","value":"nan"},"left_units":"canvas","right_units":"canvas","top_units":"canvas","bottom_units":"canvas","handles":{"type":"object","name":"BoxInteractionHandles","id":"p1041","attributes":{"all":{"type":"object","name":"AreaVisuals","id":"p1040","attributes":{"fill_color":"white","hover_fill_color":"lightgray"}}}}}}}},{"type":"object","name":"SaveTool","id":"p1042"},{"type":"object","name":"ResetTool","id":"p1043"},{"type":"object","name":"HelpTool","id":"p1044"}]}},"left":[{"type":"object","name":"LinearAxis","id":"p1027","attributes":{"ticker":{"type":"object","name":"BasicTicker","id":"p1028","attributes":{"mantissas":[1,2,5]}},"formatter":{"type":"object","name":"BasicTickFormatter","id":"p1029"},"axis_label":"Couple de torsion T (N\u00b7m)","axis_label_text_color":"white","major_label_policy":{"type":"object","name":"AllLabels","id":"p1030"},"major_label_text_color":"white"}}],"below":[{"type":"object","name":"LinearAxis","id":"p1022","attributes":{"ticker":{"type":"object","name":"BasicTicker","id":"p1023","attributes":{"mantissas":[1,2,5]}},"formatter":{"type":"object","name":"BasicTickFormatter","id":"p1024"},"axis_label":"Angle de torsion \u03b8 (\u00b0)","axis_label_text_color":"white","major_label_policy":{"type":"object","name":"AllLabels","id":"p1025"},"major_label_text_color":"white"}}],"center":[{"type":"object","name":"Grid","id":"p1026","attributes":{"axis":{"id":"p1022"}}},{"type":"object","name":"Grid","id":"p1031","attributes":{"dimension":1,"axis":{"id":"p1027"}}},{"type":"object","name":"Legend","id":"p1054","attributes":{"location":"top_left","border_line_color":"white","background_fill_color":"#1e1e1e","label_text_color":"white","items":[{"type":"object","name":"LegendItem","id":"p1055","attributes":{"label":{"type":"value","value":"T(\u03b8)"},"renderers":[{"id":"p1051"}]}},{"type":"object","name":"LegendItem","id":"p1065","attributes":{"label":{"type":"value","value":"T_c"},"renderers":[{"id":"p1062"}]}},{"type":"object","name":"LegendItem","id":"p1075","attributes":{"label":{"type":"value","value":"T_max"},"renderers":[{"id":"p1072"}]}}]}}],"background_fill_color":"#121212","border_fill_color":"#121212"}},{"type":"object","name":"Slider","id":"p1076","attributes":{"js_property_callbacks":{"type":"map","entries":[["change:value",[{"type":"object","name":"CustomJS","id":"p1081","attributes":{"args":{"type":"map","entries":[["source_curve",{"id":"p1001"}],["source_point",{"id":"p1004"}],["source_Tc",{"id":"p1007"}],["slider_theta",{"id":"p1076"}],["slider_R",{"type":"object","name":"Slider","id":"p1077","attributes":{"js_property_callbacks":{"type":"map","entries":[["change:value",[{"id":"p1081"}]]]},"title":"Rayon R (m)","start":0.05,"end":0.4,"value":0.2,"step":0.01}}],["slider_L",{"type":"object","name":"Slider","id":"p1078","attributes":{"js_property_callbacks":{"type":"map","entries":[["change:value",[{"id":"p1081"}]]]},"title":"Longueur L (m)","start":0.5,"end":2.0,"value":1.0,"step":0.1}}],["slider_G",{"type":"object","name":"Slider","id":"p1079","attributes":{"js_property_callbacks":{"type":"map","entries":[["change:value",[{"id":"p1081"}]]]},"title":"Module de cisaillement G (GPa)","start":10,"end":100,"value":50.0,"step":10}}],["sigma_c",100000000.0],["theta_values_rad",{"type":"ndarray","array":{"type":"bytes","data":"AAAAAAAAAABlUK/n0sVfP2VQr+fSxW8/THzDLV7Udz9lUK/n0sV/P0CSzdCj24M/THzDLV7Uhz9YZrmKGM2LP2VQr+fSxY8/OZ1SokbfkT8="},"shape":[10],"dtype":"float64","order":"little"}],["T_text",{"type":"object","name":"Div","id":"p1080","attributes":{"styles":{"type":"map","entries":[["color","white"],["font-size","16px"],["background-color","#121212"],["padding","5px"]]},"text":"<b>T(\u03b8) = 0.0000 N\u00b7m</b>"}}]]},"code":"\n    var theta_deg = slider_theta.value;\n    var theta_rad = theta_deg * Math.PI / 180;\n    var R = slider_R.value;\n    var L = slider_L.value;\n    var G = slider_G.value * 1e9;\n    \n    // Calcul du moment quadratique J\n    var J = (Math.PI * Math.pow(R, 4)) / 2;\n\n    // Mise \u00e0 jour des valeurs de T(\u03b8)\n    var new_T_values = theta_values_rad.map(theta => (theta * G * J) / L);\n    var new_T_point = (theta_rad * G * J) / L;\n\n    // Calcul de la nouvelle valeur de T_max pour \u03b8 = 1 radian\n    var new_Tc = (sigma_c * J) / R \n\n    // Mise \u00e0 jour des sources de donn\u00e9es\n    source_curve.data['y'] = new_T_values;\n    source_curve.change.emit();\n\n    source_point.data['x'] = [theta_deg];\n    source_point.data['y'] = [new_T_point];\n    source_point.change.emit();\n\n    source_Tc.data['y'] = [new_Tc, new_Tc];  // Mise \u00e0 jour de l'asymptote\n    source_Tc.change.emit();\n\n    // Mise \u00e0 jour du texte\n    T_text.text = \"<b>T(\u03b8) = \" + new_T_point.toFixed(4) + \" N\u00b7m</b>\";\n"}}]]]},"title":"\u03b8 (\u00b0)","start":0,"end":1,"value":0,"step":0.001}},{"id":"p1077"},{"id":"p1078"},{"id":"p1079"},{"id":"p1080"}]}}]}};
-  const render_items = [{"docid":"cc852496-32db-485b-83f5-1e55deca9fc6","roots":{"p1082":"fd2364ff-a733-428b-8d72-3ca1d2fbdb4c"},"root_ids":["p1082"]}];
+  const docs_json = {"b800ad55-167e-4080-b574-516075d75274":{"version":"3.6.2","title":"Bokeh Application","roots":[{"type":"object","name":"Column","id":"p1082","attributes":{"children":[{"type":"object","name":"Figure","id":"p1010","attributes":{"width":775,"height":500,"x_range":{"type":"object","name":"DataRange1d","id":"p1011"},"y_range":{"type":"object","name":"DataRange1d","id":"p1012"},"x_scale":{"type":"object","name":"LinearScale","id":"p1020"},"y_scale":{"type":"object","name":"LinearScale","id":"p1021"},"title":{"type":"object","name":"Title","id":"p1013","attributes":{"text":"\u00c9volution du couple T en fonction de \u03b8","text_color":"white"}},"renderers":[{"type":"object","name":"GlyphRenderer","id":"p1051","attributes":{"data_source":{"type":"object","name":"ColumnDataSource","id":"p1001","attributes":{"selected":{"type":"object","name":"Selection","id":"p1002","attributes":{"indices":[],"line_indices":[]}},"selection_policy":{"type":"object","name":"UnionRenderers","id":"p1003"},"data":{"type":"map","entries":[["x",{"type":"ndarray","array":{"type":"bytes","data":"AAAAAAAAAAAcx3Ecx3G8PxzHcRzHccw/VVVVVVVV1T8cx3Ecx3HcP3Icx3Ecx+E/VVVVVVVV5T84juM4juPoPxzHcRzHcew/AAAAAAAA8D8="},"shape":[10],"dtype":"float64","order":"little"}],["y",{"type":"ndarray","array":{"type":"bytes","data":"AAAAAAAAAABsG5R8b78NQWwblHxvvx1BkRRvnZNPJkFsG5R8b78tQSSR3K2llzJBkRRvnZNPNkH+lwGNgQc6QWwblHxvvz1BbE8Ttq67QEE="},"shape":[10],"dtype":"float64","order":"little"}]]}}},"view":{"type":"object","name":"CDSView","id":"p1052","attributes":{"filter":{"type":"object","name":"AllIndices","id":"p1053"}}},"glyph":{"type":"object","name":"Line","id":"p1048","attributes":{"x":{"type":"field","field":"x"},"y":{"type":"field","field":"y"},"line_color":"cyan","line_width":2}},"nonselection_glyph":{"type":"object","name":"Line","id":"p1049","attributes":{"x":{"type":"field","field":"x"},"y":{"type":"field","field":"y"},"line_color":"cyan","line_alpha":0.1,"line_width":2}},"muted_glyph":{"type":"object","name":"Line","id":"p1050","attributes":{"x":{"type":"field","field":"x"},"y":{"type":"field","field":"y"},"line_color":"cyan","line_alpha":0.2,"line_width":2}}}},{"type":"object","name":"GlyphRenderer","id":"p1062","attributes":{"data_source":{"type":"object","name":"ColumnDataSource","id":"p1007","attributes":{"selected":{"type":"object","name":"Selection","id":"p1008","attributes":{"indices":[],"line_indices":[]}},"selection_policy":{"type":"object","name":"UnionRenderers","id":"p1009"},"data":{"type":"map","entries":[["x",[0,1]],["y",[1256637.0614359174,1256637.0614359174]]]}}},"view":{"type":"object","name":"CDSView","id":"p1063","attributes":{"filter":{"type":"object","name":"AllIndices","id":"p1064"}}},"glyph":{"type":"object","name":"Line","id":"p1059","attributes":{"x":{"type":"field","field":"x"},"y":{"type":"field","field":"y"},"line_color":"magenta","line_width":2,"line_dash":[6]}},"nonselection_glyph":{"type":"object","name":"Line","id":"p1060","attributes":{"x":{"type":"field","field":"x"},"y":{"type":"field","field":"y"},"line_color":"magenta","line_alpha":0.1,"line_width":2,"line_dash":[6]}},"muted_glyph":{"type":"object","name":"Line","id":"p1061","attributes":{"x":{"type":"field","field":"x"},"y":{"type":"field","field":"y"},"line_color":"magenta","line_alpha":0.2,"line_width":2,"line_dash":[6]}}}},{"type":"object","name":"GlyphRenderer","id":"p1072","attributes":{"data_source":{"type":"object","name":"ColumnDataSource","id":"p1004","attributes":{"selected":{"type":"object","name":"Selection","id":"p1005","attributes":{"indices":[],"line_indices":[]}},"selection_policy":{"type":"object","name":"UnionRenderers","id":"p1006"},"data":{"type":"map","entries":[["x",[0]],["y",[0]]]}}},"view":{"type":"object","name":"CDSView","id":"p1073","attributes":{"filter":{"type":"object","name":"AllIndices","id":"p1074"}}},"glyph":{"type":"object","name":"Scatter","id":"p1069","attributes":{"x":{"type":"field","field":"x"},"y":{"type":"field","field":"y"},"size":{"type":"value","value":10},"line_color":{"type":"value","value":"yellow"},"fill_color":{"type":"value","value":"yellow"},"hatch_color":{"type":"value","value":"yellow"}}},"nonselection_glyph":{"type":"object","name":"Scatter","id":"p1070","attributes":{"x":{"type":"field","field":"x"},"y":{"type":"field","field":"y"},"size":{"type":"value","value":10},"line_color":{"type":"value","value":"yellow"},"line_alpha":{"type":"value","value":0.1},"fill_color":{"type":"value","value":"yellow"},"fill_alpha":{"type":"value","value":0.1},"hatch_color":{"type":"value","value":"yellow"},"hatch_alpha":{"type":"value","value":0.1}}},"muted_glyph":{"type":"object","name":"Scatter","id":"p1071","attributes":{"x":{"type":"field","field":"x"},"y":{"type":"field","field":"y"},"size":{"type":"value","value":10},"line_color":{"type":"value","value":"yellow"},"line_alpha":{"type":"value","value":0.2},"fill_color":{"type":"value","value":"yellow"},"fill_alpha":{"type":"value","value":0.2},"hatch_color":{"type":"value","value":"yellow"},"hatch_alpha":{"type":"value","value":0.2}}}}}],"toolbar":{"type":"object","name":"Toolbar","id":"p1019","attributes":{"tools":[{"type":"object","name":"PanTool","id":"p1032"},{"type":"object","name":"WheelZoomTool","id":"p1033","attributes":{"renderers":"auto"}},{"type":"object","name":"BoxZoomTool","id":"p1034","attributes":{"overlay":{"type":"object","name":"BoxAnnotation","id":"p1035","attributes":{"syncable":false,"line_color":"black","line_alpha":1.0,"line_width":2,"line_dash":[4,4],"fill_color":"lightgrey","fill_alpha":0.5,"level":"overlay","visible":false,"left":{"type":"number","value":"nan"},"right":{"type":"number","value":"nan"},"top":{"type":"number","value":"nan"},"bottom":{"type":"number","value":"nan"},"left_units":"canvas","right_units":"canvas","top_units":"canvas","bottom_units":"canvas","handles":{"type":"object","name":"BoxInteractionHandles","id":"p1041","attributes":{"all":{"type":"object","name":"AreaVisuals","id":"p1040","attributes":{"fill_color":"white","hover_fill_color":"lightgray"}}}}}}}},{"type":"object","name":"SaveTool","id":"p1042"},{"type":"object","name":"ResetTool","id":"p1043"},{"type":"object","name":"HelpTool","id":"p1044"}]}},"left":[{"type":"object","name":"LinearAxis","id":"p1027","attributes":{"ticker":{"type":"object","name":"BasicTicker","id":"p1028","attributes":{"mantissas":[1,2,5]}},"formatter":{"type":"object","name":"BasicTickFormatter","id":"p1029"},"axis_label":"Couple de torsion T (N\u00b7m)","axis_label_text_color":"white","major_label_policy":{"type":"object","name":"AllLabels","id":"p1030"},"major_label_text_color":"white"}}],"below":[{"type":"object","name":"LinearAxis","id":"p1022","attributes":{"ticker":{"type":"object","name":"BasicTicker","id":"p1023","attributes":{"mantissas":[1,2,5]}},"formatter":{"type":"object","name":"BasicTickFormatter","id":"p1024"},"axis_label":"Angle de torsion \u03b8 (\u00b0)","axis_label_text_color":"white","major_label_policy":{"type":"object","name":"AllLabels","id":"p1025"},"major_label_text_color":"white"}}],"center":[{"type":"object","name":"Grid","id":"p1026","attributes":{"axis":{"id":"p1022"}}},{"type":"object","name":"Grid","id":"p1031","attributes":{"dimension":1,"axis":{"id":"p1027"}}},{"type":"object","name":"Legend","id":"p1054","attributes":{"location":"top_left","border_line_color":"white","background_fill_color":"#1e1e1e","label_text_color":"white","items":[{"type":"object","name":"LegendItem","id":"p1055","attributes":{"label":{"type":"value","value":"T(\u03b8)"},"renderers":[{"id":"p1051"}]}},{"type":"object","name":"LegendItem","id":"p1065","attributes":{"label":{"type":"value","value":"T_c"},"renderers":[{"id":"p1062"}]}},{"type":"object","name":"LegendItem","id":"p1075","attributes":{"label":{"type":"value","value":"T_max"},"renderers":[{"id":"p1072"}]}}]}}],"background_fill_color":"#121212","border_fill_color":"#121212"}},{"type":"object","name":"Slider","id":"p1076","attributes":{"js_property_callbacks":{"type":"map","entries":[["change:value",[{"type":"object","name":"CustomJS","id":"p1081","attributes":{"args":{"type":"map","entries":[["source_curve",{"id":"p1001"}],["source_point",{"id":"p1004"}],["source_Tc",{"id":"p1007"}],["slider_theta",{"id":"p1076"}],["slider_R",{"type":"object","name":"Slider","id":"p1077","attributes":{"js_property_callbacks":{"type":"map","entries":[["change:value",[{"id":"p1081"}]]]},"title":"Rayon R (m)","start":0.05,"end":0.4,"value":0.2,"step":0.01}}],["slider_L",{"type":"object","name":"Slider","id":"p1078","attributes":{"js_property_callbacks":{"type":"map","entries":[["change:value",[{"id":"p1081"}]]]},"title":"Longueur L (m)","start":0.5,"end":2.0,"value":1.0,"step":0.1}}],["slider_G",{"type":"object","name":"Slider","id":"p1079","attributes":{"js_property_callbacks":{"type":"map","entries":[["change:value",[{"id":"p1081"}]]]},"title":"Module de cisaillement G (GPa)","start":10,"end":100,"value":50.0,"step":10}}],["sigma_c",100000000.0],["theta_values_rad",{"type":"ndarray","array":{"type":"bytes","data":"AAAAAAAAAABlUK/n0sVfP2VQr+fSxW8/THzDLV7Udz9lUK/n0sV/P0CSzdCj24M/THzDLV7Uhz9YZrmKGM2LP2VQr+fSxY8/OZ1SokbfkT8="},"shape":[10],"dtype":"float64","order":"little"}],["T_text",{"type":"object","name":"Div","id":"p1080","attributes":{"styles":{"type":"map","entries":[["color","white"],["font-size","16px"],["background-color","#121212"],["padding","5px"]]},"text":"<b>T(\u03b8) = 0.0000 N\u00b7m</b>"}}]]},"code":"\n    var theta_deg = slider_theta.value;\n    var theta_rad = theta_deg * Math.PI / 180;\n    var R = slider_R.value;\n    var L = slider_L.value;\n    var G = slider_G.value * 1e9;\n    \n    // Calcul du moment quadratique J\n    var J = (Math.PI * Math.pow(R, 4)) / 2;\n\n    // Mise \u00e0 jour des valeurs de T(\u03b8)\n    var new_T_values = theta_values_rad.map(theta => (theta * G * J) / L);\n    var new_T_point = (theta_rad * G * J) / L;\n\n    // Calcul de la nouvelle valeur de T_max pour \u03b8 = 1 radian\n    var new_Tc = (sigma_c * J) / R \n\n    // Mise \u00e0 jour des sources de donn\u00e9es\n    source_curve.data['y'] = new_T_values;\n    source_curve.change.emit();\n\n    source_point.data['x'] = [theta_deg];\n    source_point.data['y'] = [new_T_point];\n    source_point.change.emit();\n\n    source_Tc.data['y'] = [new_Tc, new_Tc];  // Mise \u00e0 jour de l'asymptote\n    source_Tc.change.emit();\n\n    // Mise \u00e0 jour du texte\n    T_text.text = \"<b>T(\u03b8) = \" + new_T_point.toFixed(4) + \" N\u00b7m</b>\";\n"}}]]]},"title":"\u03b8 (\u00b0)","start":0,"end":1,"value":0,"step":0.001}},{"id":"p1077"},{"id":"p1078"},{"id":"p1079"},{"id":"p1080"}]}}]}};
+  const render_items = [{"docid":"b800ad55-167e-4080-b574-516075d75274","roots":{"p1082":"bf24f1f7-a339-4f92-a909-508098b6cfaa"},"root_ids":["p1082"]}];
   void root.Bokeh.embed.embed_items_notebook(docs_json, render_items);
   }
   if (root.Bokeh !== undefined) {
@@ -1259,7 +1355,7 @@ function(Bokeh) {
   <div class="footer-item">
     
 <p class="component-author">
-By The Jupyter Book Community
+By Elfenec
 </p>
 
   </div>
